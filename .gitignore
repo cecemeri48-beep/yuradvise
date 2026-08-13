@@ -50,3 +50,4 @@ scraper/raw_html/
 scraper/hukumonline_klinik_articles.json
 
 .vercel
+.env*
