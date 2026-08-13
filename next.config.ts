@@ -10,10 +10,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Disable PWA for now (use manual service worker)
-  experimental: {
-    serverActions: {},
-  },
 }
 
 export default nextConfig
