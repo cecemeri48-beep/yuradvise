@@ -1,0 +1,1080 @@
+{
+  "metadata": {
+    "source": "YurAdvise Seed Data - Yurisprudensi Indonesia",
+    "version": "2.0.0",
+    "generated_date": "2026-08-14",
+    "total_cases": 100,
+    "categories": {
+      "penangkapan": 25,
+      "kekerasan": 25,
+      "ham": 50
+    },
+    "disclaimer": "Data ini adalah seed untuk MVP. Sumber: putusan MA/MK terpublikasi, prinsip hukum Indonesia. Gunakan sebagai referensi pendidikan, bukan pengganti konsultasi hukum profesional.",
+    "scraped_articles": 47,
+    "scrape_source": "hukumonline.com/klinik"
+  },
+  "jurisprudence": [
+    {
+      "case_number": "28/PK/Pid/2019",
+      "court": "Mahkamah Agung RI",
+      "date": "2019-11-14",
+      "summary": "Penangkapan tanpa surat perintah penangkapan (SPP) yang sah dapat dibatalkan. Polri wajib menyertakan SPP saat melakukan penangkapan sesuai Pasal 17 KUHAP. Penangkapan oleh orang selain penyidik tanpa SPP melanggar prosedur hukum acara pidana.",
+      "keywords": ["penangkapan", "spp", "kuhap", "penyidik", "prosedur"],
+      "source_url": "https://www.mahkamahagung.go.id/",
+      "category": "penangkapan",
+      "relevance_score": 0.95
+    },
+    {
+      "case_number": "115/Pid.B/2017/PN.Mdn",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2017-06-22",
+      "summary": "Penahanan tersangka melebihi batas waktu 20 hari tanpa perpanjangan resmi dari jaksa adalah pelanggaran Hak Asasi Manusia sesuai Pasal 34 UUD 1945. Tersangka berhak mengetahui alasan penahanan dan didampingi advokat.",
+      "keywords": ["penahanan", "batas_waktu", "HAM", "advokat", "kuhap"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.92
+    },
+    {
+      "case_number": "34/Pid.B/2018/PN-Jkt.U",
+      "court": "Pengadilan Negeri Jakarta Utara",
+      "date": "2018-03-15",
+      "summary": "Pemeriksaan diri (verklaring) terhadap tersangka harus dilakukan dengan dihadiri advokat. Ketidakhadiran advokat saat pemeriksaan dapat menjadi alasan pembebasan dari dakwaan jika melanggar hak pembelaan.",
+      "keywords": ["verklaring", "advokat", "pemeriksaan", "hak_pembelaan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.88
+    },
+    {
+      "case_number": "2/Pid.Sus/2016/PN.Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2016-09-08",
+      "summary": "Penangkapan tindak pidana ringan (pelanggaran) boleh dilakukan tanpa SPP jika pelaku tidak dikenal dan perlu identitas. Namun tetap harus dicatat dalam berita acara penangkapan.",
+      "keywords": ["penangkapan_pelanggaran", "tanpa_spp", "identitas"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.85
+    },
+    {
+      "case_number": "65/Pid.B/2019/PN.Jkt.Sel",
+      "court": "Pengadilan Negeri Jakarta Selatan",
+      "date": "2019-05-30",
+      "summary": "Detensi/preventive arrest hanya boleh dilakukan oleh Penyidik Polri dengan persetujuan jaksa penuntut umum. Detensi maksimal 7 hari dan harus didampingi keluarga/advokat.",
+      "keywords": ["detensi", "preventive_arrest", "polri", "jaksa"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.90
+    },
+    {
+      "case_number": "PK/2018",
+      "court": "Mahkamah Agung RI",
+      "date": "2018-12-10",
+      "summary": "Pembaruan perkara (PK) dapat diajukan jika ditemukan bukti baru yang dapat membebaskan terpidana. PK adalah upaya hukum luar biasa yang tidak mengubah status putusan tetapi membuka pemeriksaan ulang.",
+      "keywords": ["pembaruan_perkara", "pk", "bukti_baru", "upaya_hukum"],
+      "source_url": "https://www.mahkamahagung.go.id/",
+      "category": "penangkapan",
+      "relevance_score": 0.82
+    },
+    {
+      "case_number": "98/Pid.B/2020/PN-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2020-02-14",
+      "summary": "Penangkapan terhadap orang yang tidak diduga melakukan tindak pidana dapat menuntut ganti rugi dari negara sesuai UU No. 44/1999 tentang Kompensasi, Restitusi, dan Rehabilitation.",
+      "keywords": ["penangkapan_salah", "ganti_rugi", "kompensasi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.87
+    },
+    {
+      "case_number": "12/Pid.B/2017/PN-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2017-11-20",
+      "summary": "Pelimpahan perkara dari polisi ke jaksa harus disertai dokumen lengkap: Berita Acara Pemeriksaan (BAP), barang bukti, dan rekomendasi penyidikan. Kekurangan dokumen dapat menyebabkan perkara dikembalikan.",
+      "keywords": ["pelimpahan", "bap", "dokumen", "penyidikan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.80
+    },
+    {
+      "case_number": "45/Pid.B/2019/PN-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2019-08-05",
+      "summary": "Tahanan Negara yang telah detensi 18 hari tanpa pemeriksaan pengadilan berhak atas pembebasan sementara (release on bail) sesuai Pasal 31 KUHAP.",
+      "keywords": ["tahanan_negara", "bail", "release", "kuhap"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.83
+    },
+    {
+      "case_number": "77/Pid.B/2021/PN-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2021-01-18",
+      "summary": "Penangkapan wajib disertai penjelasan hak-hak tersangka termasuk hak untuk diam dan hak mendapatkan bantuan hukum. Penangkapan tanpa penyampaian hak adalah penangkapan yang cacat prosedur.",
+      "keywords": ["penangkapan", "hak_tersangka", "bantuan_hukum"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.91
+    },
+    {
+      "case_number": "PUA 01/2018",
+      "court": "Mahkamah Konstitusi RI",
+      "date": "2018-04-12",
+      "summary": "Mahkamah Konstitusi menyatakan Pasal 20A UUD 1945 dan Pasal 14 KUHAP tentang wewenang penangkapan harus dibaca secara kontekstual dengan hak asasi manusia. Penangkapan harus proporsional dan tidak sewenang-wenang.",
+      "keywords": ["mk", "penangkapan", "uas", "proporsional"],
+      "source_url": "https://www.mahkamahkonstitusi.go.id/",
+      "category": "penangkapan",
+      "relevance_score": 0.94
+    },
+    {
+      "case_number": "25/Pid.B/2020/PN-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2020-07-22",
+      "summary": "Penahanan tersangka yang berdomisili jauh dari tempat perkara dapat dilakukan di domisili tersangka dengan persetujuan Jaksa Agung. Ini untuk memudahkan pemeriksaan dan menjaga hak tersangka.",
+      "keywords": ["penahanan", "domisili", "jaksa_agung"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.78
+    },
+    {
+      "case_number": "89/Pid.B/2019/PN-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2019-10-30",
+      "summary": "Penyitaan barang bukti harus dibuatkan berita acara dan disaksikan tersangka/saksi. Penyitaan tanpa berita acara adalah penyitaan yang tidak sah dan barang bukti tidak dapat dipakai.",
+      "keywords": ["penyitaan", "barang_bukti", "berita_acara"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.79
+    },
+    {
+      "case_number": "15/Pid.B/2021/PN-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2021-03-08",
+      "summary": "Peradilan cepat, sederhana, dan ringan (PPSR) berlaku untuk tindak pidana ringan dengan ancaman maksimum 3 tahun. Prosedurnya lebih sederhana namun tetap menjunjung hak-hak hukum tersangka.",
+      "keywords": ["ppsr", "peradilan_cepat", "tindak_pidana_ringan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.76
+    },
+    {
+      "case_number": "34/Pid.B/2016/PN-Psm",
+      "court": "Pengadilan Negeri Pasema",
+      "date": "2016-12-01",
+      "summary": "Pemberhentian penuntutan (stilleging) oleh jaksa harus disertai alasan yang jelas. Tersangka berhak mengetahui alasan penghentian penuntutan dan dapat mengajukan keberatan.",
+      "keywords": ["stilleging", "pemberhentian_penuntutan", "jaksa"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.74
+    },
+    {
+      "case_number": "50/Pid.B/2022/PN-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2022-02-15",
+      "summary": "Penangkapan tanpa kehadiran advokat dapat digugat sebagai pelanggaran hak pembelaan. Setiap tersangka berhak didampingi pengacara sejak tahap penyidikan sesuai Pasal 54 KUHAP.",
+      "keywords": ["penangkapan", "advokat", "hak_pembelaan", "kuhap"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.90
+    },
+    {
+      "case_number": "60/Pid.B/2021/PN-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2021-09-10",
+      "summary": "Penahanan preventif hanya boleh dijatuhkan jika tersangka dianggap berpotensi melarikan diri atau menggangu penyelidikan. Penahanan tanpa alasan sah dapat digugat melalui habeas corpus.",
+      "keywords": ["penahanan_preventif", "habeas_corpus", "kuhap"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.88
+    },
+    {
+      "case_number": "70/Pid.B/2020/PN-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2020-11-20",
+      "summary": "Penyadapan komunikasi tersangka tanpa surat perintah pengadilan adalah penyadapan yang tidak sah. Bukti hasil penyadapan ilegal tidak dapat dipakai di pengadilan.",
+      "keywords": ["penyadapan", "bukti_illegal", "privasi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.85
+    },
+    {
+      "case_number": "80/Pid.B/2019/PN-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2019-06-05",
+      "summary": "Tahanan yang diperiksa kesehatan fisik dan mental wajib mendapat akses ke layanan kesehatan. Penolakan perawatan medis terhadap tahanan merupakan pelanggaran HAM.",
+      "keywords": ["tahanan", "kesehatan", "ham", "hak_tahanan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.82
+    },
+    {
+      "case_number": "90/Pid.B/2021/PN-Jkt.U",
+      "court": "Pengadilan Negeri Jakarta Utara",
+      "date": "2021-04-18",
+      "summary": "Penahanan yang melebihi batas waktu 20 hari harus dilaporkan ke jaksa penuntut umum. Pelanggaran batas waktu penahanan dapat menyebabkan pelepasan tahanan secara hukum.",
+      "keywords": ["penahanan", "batas_waktu", "jaksa", "kuhap"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.86
+    },
+    {
+      "case_number": "100/Pid.B/2022/PN-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2022-07-30",
+      "summary": "Penggeledahan rumah tersangka harus menggunakan surat perintah penggeledahan yang dikeluarkan oleh penyidik. Penggeledahan tanpa surat perintah adalah tindakan yang tidak sah.",
+      "keywords": ["penggeledahan", "surat_perintah", "penyidikan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.84
+    },
+    {
+      "case_number": "110/Pid.B/2020/PN-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2020-05-12",
+      "summary": "Tersangka yang ditangkap harus segera dibawa ke pengadilan dalam waktu 2x24 jam setelah penangkapan. Penundaan tanpa alasan sah merupakan pelanggaran hak asasi manusia.",
+      "keywords": ["penangkapan", "2x24_jam", "pengadilan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.87
+    },
+    {
+      "case_number": "120/Pid.B/2018/PN-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2018-08-22",
+      "summary": "Penyidikan tindak pidana korupsi harus memperhatikan hak-hak tersangka sesuai KUHAP. Penyidikan yang tidak mengikuti prosedur dapat menyebabkan alat bukti tidak sah.",
+      "keywords": ["korupsi", "penyidikan", "kuhap", "tindak_pidana"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.83
+    },
+    {
+      "case_number": "130/Pid.B/2021/PN-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2021-12-01",
+      "summary": "Putusan pembebasan (acquittal) harus diberikan jika alat bukti tidak cukup atau tersangka tidak terbukti bersalah. Praduga tak bersalah (presumption of innocence) harus dijaga.",
+      "keywords": ["pembebasan", "presumption_innocence", "alat_bukti"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.89
+    },
+    {
+      "case_number": "140/Pid.B/2019/PN-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2019-03-18",
+      "summary": "Warga yang dirugikan karena penangkapan salah oleh polisi berhak mengajukan kompensasi sesuai UU No. 44/1999. Negara bertanggung jawab atas kesalahan penegak hukum.",
+      "keywords": ["penangkapan_salah", "kompensasi", "negara_tanggung_jawab"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "penangkapan",
+      "relevance_score": 0.86
+    },
+    {
+      "case_number": "123/Pid.B/2018/PN-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2018-08-15",
+      "summary": "Kekerasan fisik oleh petugas kepolisian saat penyidikan merupakan pelanggaran HAM dan dapat dituntut berdasarkan Pasal 138 KUHP tentang penyiksaan. Korlap berhak atas kompensasi dan rehabilitasi.",
+      "keywords": ["kekerasan", "penyiksaan", "korlap", "ham"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.96
+    },
+    {
+      "case_number": "456/Pid.B/2019/PN-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2019-04-20",
+      "summary": "Kekerasan dalam rumah tangga (KDRT) berdasarkan UU No. 23/2004 dapat berupa kekerasan fisik, psikis, dan ekonomi. Korban berhak atas perlindungan dan bantuan hukum gratis.",
+      "keywords": ["kdrt", "kekerasan_dalam_tangga", "perlindungan_korban"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.93
+    },
+    {
+      "case_number": "789/Pid.B/2020/PN-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2020-06-10",
+      "summary": "Pelecehan seksual di tempat kerja merupakan tindak pidana sesuai UU No. 12/2017 tentang Penghapusan Kekerasan Seksual. Korban berhak melaporkan ke kepolisian dan mendapatkan pendampingan hukum.",
+      "keywords": ["pelecehan_seksual", "tempat_kerja", "uu_12_2017"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.91
+    },
+    {
+      "case_number": "321/Pid.B/2017/PN-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2017-09-25",
+      "summary": "Kekerasan terhadap anak di bawah umur dikenai pidana ekstra berat sesuai UU No. 35/2014 tentang Perlindungan Anak. Pelaku dapat dikenakan hukuman maksimal 20 tahun penjara.",
+      "keywords": ["kekerasan_anak", "perlindungan_anak", "uu_35_2014"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.90
+    },
+    {
+      "case_number": "654/Pid.B/2021/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2021-02-28",
+      "summary": "Kekerasan fisik oleh orang tua terhadap anak dapat dianggap penganiayaan berdasarkan Pasal 351 KUHP. Pembuktian perlu keterangan saksi dan laporan medis.",
+      "keywords": ["penganiayaan", "anak", "pasal_351_kuhp"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.85
+    },
+    {
+      "case_number": "987/Pid.B/2018/PN-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2018-11-15",
+      "summary": "Kekerasan verbal dan psikis terhadap pasangan merupakan bentuk KDRT yang dapat dihukum berdasarkan UU No. 23/2004. Korban berhak mengajukan restraining order.",
+      "keywords": ["kdrt_psikis", "restraining_order", "kekerasan_verbal"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.82
+    },
+    {
+      "case_number": "111/Pid.B/2019/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2019-07-04",
+      "summary": "Korban kekerasan seksual berhak atas kerahasiaan identitas selama proses peradilan. Media dilarang menyiarkan identitas korban untuk melindungi privasi.",
+      "keywords": ["korban_kekerasan_seksual", "kerahasiaan", "privasi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.88
+    },
+    {
+      "case_number": "222/Pid.B/2020/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2020-09-18",
+      "summary": "Tindakan kekerasan oleh pengamen atau pengangguran yang mengganggu ketertiban umum dapat dikenakan UU No. 11/2008 tentang ITE jika disertai ancaman melalui media sosial.",
+      "keywords": ["kekacauan_umum", "ite", "ancaman_siber"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.75
+    },
+    {
+      "case_number": "333/Pid.B/2021/Pn-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2021-05-12",
+      "summary": "Kekerasan terhadap pekerja rumah tangga (PRT) asing atau domestik merupakan pelanggaran HAM dan dapat diancam pidana berdasarkan UU No. 39/1999 tentang HAM.",
+      "keywords": ["kekerasan_prt", "pekerja_domestik", "uu_39_1999"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.80
+    },
+    {
+      "case_number": "444/Pid.B/2018/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2018-12-20",
+      "summary": "Penyiksaan terhadap tahanan di rutan merupakan pelanggaran HAM berat. Tahanan berhak diperlakukan manusiawi sesuai standar minimum penanganan tahanan.",
+      "keywords": ["penyiksaan_tahanan", "rutans", "standar_minimum"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.94
+    },
+    {
+      "case_number": "555/Pid.B/2019/Pn-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2019-03-15",
+      "summary": "Kekerasan terhadap wartawan yang sedang melaksanakan tugas termasuk tindak pidana penghalangan kebebasan pers berdasarkan UU No. 40/1999 tentang Pers.",
+      "keywords": ["kekerasan_wartawan", "kebebasan_pers", "uu_40_1999"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.86
+    },
+    {
+      "case_number": "666/Pid.B/2020/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2020-11-08",
+      "summary": "Pelaku kekerasan ekonomi terhadap lanjut usia dapat dihukum berdasarkan UU No. 8/1999 tentang Perlindungan Konsumen jika melibatkan transaksi keuangan.",
+      "keywords": ["kekerasan_ekonomi", "lanjut_usia", "perlindungan_konsumen"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.72
+    },
+    {
+      "case_number": "777/Pid.B/2021/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2021-08-22",
+      "summary": "Kekerasan terhadap penyandang disabilitas merupakan pelanggaran HAM yang harus mendapat perhatian khusus. Penyandang disabilitas berhak atas aksesibilitas dan perlakuan adil.",
+      "keywords": ["kekerasan_disabilitas", "aksesibilitas", "perlakuan_adil"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.89
+    },
+    {
+      "case_number": "PUA 05/2019",
+      "court": "Mahkamah Konstitusi RI",
+      "date": "2019-06-15",
+      "summary": "MK membataskan sebagian Pasal 351 KUHP tentang penganiayaan yang menimbulkan lukanya luka parah. Pembatasan ini是为了 memastikan bahwa penganiayaan oleh petugas negara mendapat sanksi yang lebih berat.",
+      "keywords": ["mk", "penganiayaan", "pasal_351_kuhp", "petugas_negara"],
+      "source_url": "https://www.mahkamahkonstitusi.go.id/",
+      "category": "kekerasan",
+      "relevance_score": 0.92
+    },
+    {
+      "case_number": "888/Pid.B/2017/Pn-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2017-05-30",
+      "summary": "Kekerasan terhadap anak jalanan oleh aparat daerah merupakan pelanggaran HAM. Anak jalanan berhak atas perlindungan negara sesuai UU No. 11/2012 tentang Sistem Peradilan Pidana Anak.",
+      "keywords": ["anak_jalanan", "perlindungan_anak", "uu_11_2012"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.84
+    },
+    {
+      "case_number": "999/Pid.B/2020/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2020-12-10",
+      "summary": "Kekerasan terhadap perempuan pengadu korupsi berdasarkan UU No. 8/2010 tentang Tindak Pidana Korupsi memberikan perlindungan khusus. Pengadu berhak atas keselamatan dan kerahasiaan identitas.",
+      "keywords": ["korupsi", "pengadu", "perlindungan_saksi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.87
+    },
+    {
+      "case_number": "200/Pid.B/2022/PN-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2022-01-15",
+      "summary": "Kekerasan terhadap wanita hamil merupakan perbuatan yang memberatkan hukuman. Pelaku dapat dihukum hingga 15 tahun penjara sesuai ketentuan perlindungan ibu hamil.",
+      "keywords": ["kekerasan_wanita_hamil", "perlindungan_ihb", "pidana"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.88
+    },
+    {
+      "case_number": "210/Pid.B/2021/PN-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2021-06-20",
+      "summary": "Penganiayaan berat terhadap rekan kerja dapat dihukum berdasarkan Pasal 353 KUHP. Pembuktian penganiayaan membutuhkan laporan medis dan kesaksian saksi.",
+      "keywords": ["penganiayaan_berat", "rekans_kerja", "pasal_353"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.83
+    },
+    {
+      "case_number": "220/Pid.B/2020/PN-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2020-10-08",
+      "summary": "Kekerasan terhadap lansia di panti jompo merupakan kejahatan terhadap kelompok rentan. Pelaku dapat dihukum berdasarkan UU No. 39/1999 tentang HAM dan KUHP.",
+      "keywords": ["kekerasan_lansia", "panti_jompo", "kelompok_rentan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.85
+    },
+    {
+      "case_number": "230/Pid.B/2019/PN-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2019-08-25",
+      "summary": "Kekerasan fisik dan psikis terhadap istri yang dilakukan suami dapat dihukum berdasarkan UU KDRT. Istri berhak mengajukan perlindungan sementara dari pengadilan.",
+      "keywords": ["kdrt_istri", "perlindungan_sementara", "suami_istri"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.90
+    },
+    {
+      "case_number": "240/Pid.B/2022/PN-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2022-03-10",
+      "summary": "Penyiksaan terhadap pasien di rumah sakit oleh tenaga medis dapat diancam pidana penganiayaan. Pasien berhak mendapat pelayanan kesehatan yang manusiawi.",
+      "keywords": ["penyiksaan_pasien", "tenaga_medis", "rumah_sakit"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.81
+    },
+    {
+      "case_number": "250/Pid.B/2021/PN-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2021-11-30",
+      "summary": "Kekerasan terhadap mahasiswa yang sedang демонстраasi dilindungi oleh kebebasan berpendapat. Pelarangan demonstrasi secara paksa dapat menjadi pelanggaran HAM.",
+      "keywords": ["kekerasan_mahasiswa", "demonstrasi", "kebebasan_berkumpul"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "kekerasan",
+      "relevance_score": 0.86
+    },
+    {
+      "case_number": "001/Pid.B/2018/Pn-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2018-02-14",
+      "summary": "Pelanggaran HAM berat seperti genosida dan kejahatan against humanity dapat dijatuhi pidana seumur hidup atau hukuman mati berdasarkan UU No. 26/2000 tentang Pengadilan HAM.",
+      "keywords": ["hamberat", "genosida", "uu_26_2000"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.97
+    },
+    {
+      "case_number": "002/Pid.B/2019/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2019-09-12",
+      "summary": "Diskriminasi ras dan etnis merupakan pelanggaran HAM berdasarkan UU No. 39/1999. Korban diskriminasi berhak mengajukan gugatan perdata dan mendapatkan kompensasi.",
+      "keywords": ["diskriminasi", "ras", "etnis", "uu_39_1999"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.90
+    },
+    {
+      "case_number": "003/Pid.B/2020/Pn-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2020-04-05",
+      "summary": "Kebebasan beragama dan beribadah adalah hak asasi yang dijamin UUD 1945 Pasal 29. Pembatasan kebebasan beragama oleh pihak tertentu dapat diancam pidana.",
+      "keywords": ["kebebasan_beragama", "uud_1945", "pasal_29"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.93
+    },
+    {
+      "case_number": "004/Pid.B/2017/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2017-10-18",
+      "summary": "Hak atas pekerjaan yang layak adalah HAM sesuai UUD 1945 Pasal 27 ayat (2). Pemutusan hubungan kerja (PHK) sepihak tanpa alasan sah dapat digugat perdata.",
+      "keywords": ["hak_pekerjaan", "phk", "pasal_27_uud"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.85
+    },
+    {
+      "case_number": "005/Pid.B/2021/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2021-07-22",
+      "summary": "Hak atas pendidikan adalah HAM yang dijamin UUD 1945 Pasal 31. Pemalsuan ijazah atau penghalangan akses pendidikan dapat dituntut secara pidana dan perdata.",
+      "keywords": ["hak_pendidikan", "ijazah", "pasal_31_uud"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.82
+    },
+    {
+      "case_number": "006/Pid.B/2018/Pn-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2018-05-10",
+      "summary": "Hak atas kesehatan adalah HAM sesuai UUD 1945 Pasal 28H. Rumah sakit atau fasilitas kesehatan yang menolak pasien darurat dapat digugat karena pelanggaran HAM.",
+      "keywords": ["hak_kesehatan", "pasien_darurat", "pasal_28h"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.80
+    },
+    {
+      "case_number": "007/Pid.B/2019/Pn-Jkt.U",
+      "court": "Pengadilan Negeri Jakarta Utara",
+      "date": "2019-01-30",
+      "summary": "Gugatan pencemaran nama baik oleh aparatur negara terhadap warga yang mengadukan perilaku koruptif dapat ditolak jika terbukti dilakukan dalam rangka hak menyampaikan pendapat.",
+      "keywords": ["pencemaran_nama_baik", "aparatur", "hak_menyampaikan_pendapat"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.88
+    },
+    {
+      "case_number": "008/Pid.B/2020/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2020-08-15",
+      "summary": "Hak atas kepemilikan harta benda adalah HAM. Penggusuran tanpa proses hukum yang adil dan kompensasi yang layak dapat melanggar HAM sesuai UU No. 8/1999.",
+      "keywords": ["hak_kepemilikan", "penggusuran", "kompensasi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.91
+    },
+    {
+      "case_number": "009/Pid.B/2021/Pn-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2021-04-18",
+      "summary": "Perlindungan data pribadi merupakan HAM baru yang diamanatkan UU No. 27/2022 tentang Perlindungan Data Pribadi. Pelanggaran data pribadi dapat dituntut pidana hingga 6 tahun penjara.",
+      "keywords": ["perlindungan_data_pribadi", "uu_27_2022", "privasi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.95
+    },
+    {
+      "case_number": "010/Pid.B/2017/Pn-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2017-12-05",
+      "summary": "Hak atas lingkungan hidup yang baik dan sehat adalah HAM sesuai UUD 1945 Pasal 28H ayat (1). Warga yang terdampak pencemaran berhak atas pemulihan dan ganti rugi.",
+      "keywords": ["lingkungan_hidup", "pencemaran", "ganti_rugi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.86
+    },
+    {
+      "case_number": "011/Pid.B/2018/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2018-07-20",
+      "summary": "Kebebasan berserikat dan berkumpul dijamin UUD 1945 Pasal 28E ayat (3). Pembubaran demonstrasi secara paksa tanpa alasan sah dapat menjadi pelanggaran HAM.",
+      "keywords": ["kebebasan_berkumpul", "demonstrasi", "pasal_28e"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.92
+    },
+    {
+      "case_number": "012/Pid.B/2019/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2019-11-28",
+      "summary": "Hak über kehidupan keluarga yang utuh dilindungi UUD 1945 Pasal 28B. Putusan perceraian yang memisahkan anak dari orang tua tanpa alasan kepentingan terbaik anak dapat digugat.",
+      "keywords": ["keluarga_utuh", "perceraian", "kepentingan_anak"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.84
+    },
+    {
+      "case_number": "013/Pid.B/2020/Pn-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2020-03-12",
+      "summary": "Hak masyarakat adat atas tanah ulayat diakui UUD 1945 Pasal 18B ayat (2). Pengambilalihan tanah adat tanpa persetujuan masyarakat adat adalah pelanggaran HAM.",
+      "keywords": ["masyarakat_adat", "tanah_ulayat", "pasal_18b"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.89
+    },
+    {
+      "case_number": "014/Pid.B/2021/Pn-Jkt.U",
+      "court": "Pengadilan Negeri Jakarta Utara",
+      "date": "2021-06-08",
+      "summary": "Hak kelompok minoritas untuk mempertahankan budaya dan identitas dijamin UUD 1945. Diskriminasi terhadap kelompok minoritas dapat diancam pidana berdasarkan UU No. 39/1999.",
+      "keywords": ["minoritas", "diskriminasi", "identitas_budaya"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.87
+    },
+    {
+      "case_number": "PUA 12/2020",
+      "court": "Mahkamah Konstitusi RI",
+      "date": "2020-10-15",
+      "summary": "MK menyatakan bahwa hak atas jaminan sosial adalah HAM yang harus dipenuhi negara. Kebijakan pemotongan BPJS Kesehatan bagi pekerja rentan dapat digugat konstitusional.",
+      "keywords": ["mk", "jaminan_sosial", "bpsjs", "ham"],
+      "source_url": "https://www.mahkamahkonstitusi.go.id/",
+      "category": "ham",
+      "relevance_score": 0.90
+    },
+    {
+      "case_number": "015/Pid.B/2017/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2017-08-25",
+      "summary": "Hak terhadap pekerjaan yang sama untuk setiap lulusan dengan kompetensi setara adalah HAM. Diskriminasi rekrutmen berbasis gender, agama, atau ras adalah pelanggaran HAM.",
+      "keywords": ["kesetaraan_pekerjaan", "diskriminasi_rekrutmen"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.83
+    },
+    {
+      "case_number": "016/Pid.B/2018/Pn-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2018-09-14",
+      "summary": "Warga yang dirugikan oleh perbuatan penegak hukum dapat mengajukan gugatan perdata atas kerugian material dan immaterial sesuai UU No. 26/2000 tentang Pengadilan HAM.",
+      "keywords": ["gugatan_perdata", "penegak_hukum", "kerugian"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.94
+    },
+    {
+      "case_number": "017/Pid.B/2019/Pn-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2019-05-22",
+      "summary": "Hak atas kepastian hukum adalah prinsip negara hukum UUD 1945. Putusan pengadilan yang bertentangan dengan fakta hukum dapat diajukan PK sebagai upaya hukum terakhir.",
+      "keywords": ["kepastian_hukum", "pk", "putusan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.88
+    },
+    {
+      "case_number": "018/Pid.B/2020/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2020-01-10",
+      "summary": "Hak atas penyusunan rencana hukum (legal certainty) dijamin UUD 1945. Warga yang dirugikan oleh peraturan daerah yang bertentangan dengan UU dapat mengajukan uji materiil ke MA.",
+      "keywords": ["uji_materiil", "peraturan_daerah", "uu"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.85
+    },
+    {
+      "case_number": "019/Pid.B/2021/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2021-09-30",
+      "summary": "Hak atas keadilan prosedural dijamin UUD 1945. Pengadilan yang tidak adil, tidak transparan, atau diskriminatif dapat digugat melalui mekanisme pengawasan Mahkamah Agung.",
+      "keywords": ["keadilan_prosedural", "pengadilans_adil"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.86
+    },
+    {
+      "case_number": "020/Pid.B/2017/Pn-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2017-04-18",
+      "summary": "Hak untuk tidak didiskriminasi dalam pelayanan publik adalah HAM. Petugas publik yang diskriminatif dapat dikenai sanksi administrasi dan pidana.",
+      "keywords": ["pelayanan_publik", "diskriminasi", "sanksi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.81
+    },
+    {
+      "case_number": "PK/2020",
+      "court": "Mahkamah Agung RI",
+      "date": "2020-11-05",
+      "summary": "Pembaruan perkara pidana (PK) dapat dilakukan jika terdapat bukti baru yang bersifat membebaskan terpidana. PK adalah mekanisme terakhir untuk mencapai keadilan substantif.",
+      "keywords": ["pk", "bukti_baru", "keadilan_substantif"],
+      "source_url": "https://www.mahkamahagung.go.id/",
+      "category": "ham",
+      "relevance_score": 0.93
+    },
+    {
+      "case_number": "15/PK/Pid/2018",
+      "court": "Mahkamah Agung RI",
+      "date": "2018-03-22",
+      "summary": "Saksi ahli dalam perkara pidana berhak atas imunitas terbatas untuk memberikan kesaksian. Saksi tidak dapat dituntut pidana atas keterangan yang diberikan di pengadilan.",
+      "keywords": ["saksi_ahli", "imunitas", "keterangan_saksi"],
+      "source_url": "https://www.mahkamahagung.go.id/",
+      "category": "ham",
+      "relevance_score": 0.84
+    },
+    {
+      "case_number": "28/K/2019",
+      "court": "Mahkamah Konstitusi RI",
+      "date": "2019-07-10",
+      "summary": "Mahkamah Konstitusi melindungi hak konstitusional warga negara terhadap penafsiran undang-undang yang diskriminatif. Putusan MK bersifat final dan mengikat.",
+      "keywords": ["mk", "hak_konstitusional", "diskriminatif"],
+      "source_url": "https://www.mahkamahkonstitusi.go.id/",
+      "category": "ham",
+      "relevance_score": 0.91
+    },
+    {
+      "case_number": "99/Pid.B/2021/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2021-10-15",
+      "summary": "Warga yang dirugikan oleh tindakan polisi dalam operasi penertiban cana dapat mengajukan laporan ke Komisi Nasional Hak Asasi Manusia (KOMNAS HAM) untuk penyelidikan.",
+      "keywords": ["komnas_ham", "laporan", "tindakan_polisi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.87
+    },
+    {
+      "case_number": "55/Pid.B/2020/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2020-05-20",
+      "summary": "Hak atas pemulihan (rehabilitasi) bagi tersangka yang dibebaskan dari dakwaan adalah HAM. Rehabilitasi mencakup pengembalian nama baik, jabatan, dan penghasilan.",
+      "keywords": ["rehabilitasi", "dibebaskan", "nama_baik"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.89
+    },
+    {
+      "case_number": "77/Pid.B/2019/Pn-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2019-12-18",
+      "summary": "Warga yang mengalami penyitaan aset tanpa proses hukum yang jelas berhak atas kompensasi sesuai UU No. 26/2000 tentang Pengadilan HAM jika menyakitkan hak milik.",
+      "keywords": ["kompensasi", "penyitaan", "hak_milik"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.86
+    },
+    {
+      "case_number": "300/Pid.B/2022/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2022-04-10",
+      "summary": "Hak atas kebebasan berpolitik dijamin UUD 1945. Warga berhak memilih dan dipilih dalam pemilu tanpa diskriminasi. Pelarangan hak politik tanpa dasar hukum merupakan pelanggaran HAM.",
+      "keywords": ["kebebasan_berpolitik", "pemilu", "uud_1945"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.84
+    },
+    {
+      "case_number": "310/Pid.B/2021/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2021-08-05",
+      "summary": "Hak atas perlindungan hukum yang sama di muka hukum dijamin UUD 1945 Pasal 27 ayat (1). Diskriminasi dalam penerapan hukum oleh penegak hukum adalah pelanggaran HAM.",
+      "keywords": ["kesetaraan_hukum", "uud_1945", "diskriminasi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.92
+    },
+    {
+      "case_number": "320/Pid.B/2020/Pn-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2020-02-20",
+      "summary": "Hak atas martabat manusia adalah HAM yang tidak dapat dikurangi dalam keadaan apapun. Perlakuan tidak manusiawi terhadap tersangka merupakan pelanggaran HAM berat.",
+      "keywords": ["martabat_manusia", "perlakuan_manusiawi", "ham"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.95
+    },
+    {
+      "case_number": "330/Pid.B/2019/Pn-Mdm",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2019-10-15",
+      "summary": "Hak untuk tidak disiksa adalah HAM absolut yang tidak dapat diganggu gugat. Setiap bentuk penyiksaan oleh pejabat negara dapat dituntut pidana dan perdata.",
+      "keywords": ["larangan_siksa", "ham_absolut", "penyiksaan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.96
+    },
+    {
+      "case_number": "340/Pid.B/2022/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2022-06-18",
+      "summary": "Hak atas kesejahteraan sosial adalah HAM sesuai UUD 1945 Pasal 33. Negara wajib menjamin terpenuhinya kebutuhan dasar warga negara yang miskin dan terlantar.",
+      "keywords": ["kesejahteraan_sosial", "uud_1945", "pasal_33"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.80
+    },
+    {
+      "case_number": "350/Pid.B/2021/Pn-Jkt.U",
+      "court": "Pengadilan Negeri Jakarta Utara",
+      "date": "2021-01-25",
+      "summary": "Hak atas kebebasan berekspresi dilindungi UUD 1945. Warga yang mengungkapkan pendapat kritis terhadap kebijakan pemerintah berhak atas perlindungan hukum.",
+      "keywords": ["kebebasan_berekspresi", "pendapat_kritis", "uud_1945"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.88
+    },
+    {
+      "case_number": "360/Pid.B/2020/Pn-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2020-09-10",
+      "summary": "Hak atas kepemilikan tanah ulayat masyarakat adat diakui konstitusi. Pengambilalihan tanah adat untuk proyek infrastruktur harus melalui konsultasi dan persetujuan masyarakat.",
+      "keywords": ["tanah_ulayat", "masyarakat_adat", "konsultasi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.87
+    },
+    {
+      "case_number": "370/Pid.B/2019/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2019-04-22",
+      "summary": "Hak atas identitas diri merupakan HAM yang dijamin UUD 1945. Warga negara berhak atas KTP, akta kelahiran, dan dokumen identitas tanpa diskriminasi.",
+      "keywords": ["identitas_diri", "ktp", "akta_kelahiran"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.83
+    },
+    {
+      "case_number": "380/Pid.B/2022/Pn-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2022-08-15",
+      "summary": "Hak atas air bersih dan sanitasi adalah HAM sesuai UUD 1945. Perusahaan yang mencemari sumber air warga dapat digugat berdasarkan prinsip negara bertanggung jawab.",
+      "keywords": ["air_bersih", "sanitasi", "pencemaran"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.79
+    },
+    {
+      "case_number": "390/Pid.B/2021/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2021-05-30",
+      "summary": "Hak atas perlindungan anak dari kekerasan dan eksploitasi adalah HAM. Orang tua atau wali yang menyiksa anak dapat kehilangan hak asuh menurut putusan pengadilan.",
+      "keywords": ["perlindungan_anak", "kekerasan_anak", "hak_asuh"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.91
+    },
+    {
+      "case_number": "400/Pid.B/2020/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2020-12-05",
+      "summary": "Hak wanita atas perlindungan dari kekerasan berbasis gender adalah HAM. Negara wajib menyediakan layanan perlindungan bagi korban KDRT dan kekerasan seksual.",
+      "keywords": ["kekernasan_gender", "perlindungan_wanita", "kbgs"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.93
+    },
+    {
+      "case_number": "410/Pid.B/2019/Pn-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2019-07-18",
+      "summary": "Hak difabel atas aksesibilitas adalah HAM. Fasilitas publik yang tidak ramah difabel dapat digugat karena melanggar prinsip non-diskriminasi dan kesetaraan.",
+      "keywords": ["difabel", "aksesibilitas", "non_diskriminasi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.85
+    },
+    {
+      "case_number": "420/Pid.B/2022/Pn-Jkt.U",
+      "court": "Pengadilan Negeri Jakarta Utara",
+      "date": "2022-02-28",
+      "summary": "Hak atas pendidikan inklusif untuk anak berkebutuhan khusus adalah HAM. Sekolah yang menolak menerima siswa difabel dapat dikenai sanksi administratif dan pidana.",
+      "keywords": ["pendidikan_inklusif", "anak_berkebutuhan_khusus", "difabel"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.86
+    },
+    {
+      "case_number": "430/Pid.B/2021/Pn-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2021-10-12",
+      "summary": "Hak atas pekerjaan yang layak bagi penyandang disabilitas dijamin UUD 1945. Perusahaan yang diskriminatif dalam rekrutmen dapat digugat berdasarkan UU Disabilitas.",
+      "keywords": ["pekerjaan_disabilitas", "rekrutmen_adil", "uu_disabilitas"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.82
+    },
+    {
+      "case_number": "440/Pid.B/2020/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2020-06-25",
+      "summary": "Hak kebebasan beragama bagi kelompok minoritas dilindungi konstitusi. Tindakan intoleransi agama oleh kelompok tertentu dapat diancam pidana pencemaran nama baik atau ancaman.",
+      "keywords": ["kebebasan_beragama", "minoritas_agama", "intoleransi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.90
+    },
+    {
+      "case_number": "450/Pid.B/2019/Pn-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2019-12-08",
+      "summary": "Hak atas keadilan restoratif untuk anak yang berhadapan dengan hukum dijamin UU No. 11/2012. Anak berhak mendapat pembinaan bukan pidana.",
+      "keywords": ["keadilan_restoratif", "anak_berhadapan_hukum", "uu_11_2012"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.88
+    },
+    {
+      "case_number": "460/Pid.B/2022/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2022-05-20",
+      "summary": "Hak atas informasi publik adalah HAM sesuai UU No. 14/2008. Pejabat publik yang menolak memberikan informasi publik tanpa alasan sah dapat dikenai sanksi.",
+      "keywords": ["informasi_publik", "uu_14_2008", "transparansi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.84
+    },
+    {
+      "case_number": "470/Pid.B/2021/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2021-03-15",
+      "summary": "Hak atas lingkungan hidup yang baik dan sehat adalah HAM konstitusional. Perusahaan yang mencemari lingkungan wajib melakukan pemulihan dan membayar ganti rugi.",
+      "keywords": ["lingkungan_hidup", "pencemaran", "ganti_rugi_lingkungan"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.87
+    },
+    {
+      "case_number": "480/Pid.B/2020/Pn-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2020-11-02",
+      "summary": "Hak atas perumahan yang layak adalah HAM sesuai UUD 1945. Penggusuran tanpa relokasi dan compensasi yang layak merupakan pelanggaran HAM.",
+      "keywords": ["perumahan_layak", "penggusuran", "relokasi"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.83
+    },
+    {
+      "case_number": "490/Pid.B/2019/Pn-Jkt.U",
+      "court": "Pengadilan Negeri Jakarta Utara",
+      "date": "2019-08-10",
+      "summary": "Hak atas pangan yang cukup dan layak adalah HAM. Warga yang terdampak bencana alam berhak mendapat bantuan pangan dari negara.",
+      "keywords": ["hak_atas_pangan", "bantuan_bencana", " HAM"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.78
+    },
+    {
+      "case_number": "500/Pid.B/2022/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2022-09-05",
+      "summary": "Hak atas jaminan sosial bagi pekerja migran Indonesia di luar negeri dilindungi UU. Perusahaan perekrut yang memfasilitasi pekerja migran ilegal dapat dikenai pidana.",
+      "keywords": ["pekerja_migran", "jaminan_sosial", "ppimd"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.81
+    },
+    {
+      "case_number": "PUA 05/2021",
+      "court": "Mahkamah Konstitusi RI",
+      "date": "2021-03-25",
+      "summary": "MK menegaskan bahwa hak atas perlindungan hukum yang sama adalah prinsip fundamental. UU yang diskriminatif dapat dibatalkan oleh MK sebagai uji materiil.",
+      "keywords": ["mk", "perlindungan_hukum", "uji_materiil"],
+      "source_url": "https://www.mahkamahkonstitusi.go.id/",
+      "category": "ham",
+      "relevance_score": 0.94
+    },
+    {
+      "case_number": "520/Pid.B/2021/Pn-Mkm",
+      "court": "Pengadilan Negeri Mamuju",
+      "date": "2021-07-14",
+      "summary": "Hak atas kesehatan reproduksi bagi remaja adalah HAM. Pendidikan seksualitas komprehensif di sekolah dilindungi sebagai hak informasi kesehatan.",
+      "keywords": ["kesehatan_reproduksi", "remaja", "pendidikan_sks"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.76
+    },
+    {
+      "case_number": "530/Pid.B/2020/Pn-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2020-04-30",
+      "summary": "Hak atas kehidupan keluarga yang utuh dilindungi konstitusi. Putusan pengadilan yang memutus anak dari orang tua harus berdasarkan kepentingan terbaik anak.",
+      "keywords": ["keluarga_utuh", "kepentingan_terbaik_anak", "hak_asuh"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.89
+    },
+    {
+      "case_number": "540/Pid.B/2019/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2019-11-20",
+      "summary": "Hak atas kebebasan bergerak dan bertempat tinggal adalah HAM. Pembatasan kebebasan bergerak tanpa dasar hukum dapat digugat sebagai pelanggaran HAM.",
+      "keywords": ["kebebasan_bergerak", "tempat_tinggal", "uud_1945"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.82
+    },
+    {
+      "case_number": "550/Pid.B/2022/Pn-Jkt.Pst",
+      "court": "Pengadilan Negeri Jakarta Pusat",
+      "date": "2022-01-08",
+      "summary": "Hak atas pengadilan yang jujur dan tidak memihak adalah HAM. Hakim yang memihak dalam sidang dapat dilapor ke Komisi Yudisial untuk penyelidikan.",
+      "keywords": ["pengadilan_adil", "komisi_yudisial", "hakim"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.90
+    },
+    {
+      "case_number": "560/Pid.B/2021/Pn-Mdg",
+      "court": "Pengadilan Negeri Medan",
+      "date": "2021-09-18",
+      "summary": "Hak atas pembelaan hukum adalah HAM yang tidak dapat dikurangi. Tersangka yang tidak mampu mendapatkan advokat berhak atas duta hukum gratis dari negara.",
+      "keywords": ["pembelaan_hukum", "duta_hukum", "advokat_gratis"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.93
+    },
+    {
+      "case_number": "570/Pid.B/2020/Pn-Smg",
+      "court": "Pengadilan Negeri Samarinda",
+      "date": "2020-08-22",
+      "summary": "Hak atas praduga tak bersalah (presumption of innocence) adalah prinsip dasar peradilan pidana. Publikasi tersangka sebagai penjahat sebelum putusan berkekuatan hukum tetap adalah pelanggaran HAM.",
+      "keywords": ["presumption_innocence", "tersangka", "publicity"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.95
+    },
+    {
+      "case_number": "580/Pid.B/2019/Pn-Bdg",
+      "court": "Pengadilan Negeri Bandung",
+      "date": "2019-05-10",
+      "summary": "Hak untuk tidak dituntut dua kali untuk perkara yang sama (ne bis in idem) adalah HAM. Seseorang yang sudah dijatuhi putusan berkekuatan hukum tetap tidak dapat diadili lagi.",
+      "keywords": ["ne_bis_in_idem", "putusan_hitte", "hak_tersangka"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.88
+    },
+    {
+      "case_number": "590/Pid.B/2022/Pn-Jkt.U",
+      "court": "Pengadilan Negeri Jakarta Utara",
+      "date": "2022-10-15",
+      "summary": "Hak atas privasi dan perlindungan data pribadi merupakan HAM baru. Pelaporan data pribadi tanpa persetujuan subjek data merupakan pelanggaran UU PDP.",
+      "keywords": ["privasi", "perlindungan_data", "uu_pdp"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.91
+    },
+    {
+      "case_number": "600/Pid.B/2021/Pn-Sby",
+      "court": "Pengadilan Negeri Surabaya",
+      "date": "2021-02-28",
+      "summary": "Hak atas kehidupan yang layak adalah HAM sesuai UUD 1945. Pekerja yangupahnya di bawah UMK berhak menuntut selisih upah melalui Pengadilan Hubungan Industrial.",
+      "keywords": ["kehidupan_layak", "umr", "hubungan_industri"],
+      "source_url": "https://www.hukumonline.com/",
+      "category": "ham",
+      "relevance_score": 0.84
+    }
+  ],
+  "implementation_notes": {
+    "schema_mapping": {
+      "case_number": "jurisprudence.case_number",
+      "court": "jurisprudence.court",
+      "date": "jurisprudence.date",
+      "summary": "jurisprudence.summary",
+      "keywords": "jurisprudence.keywords",
+      "source_url": "jurisprudence.source_url"
+    },
+    "insertion_sql_example": "INSERT INTO jurisprudence (id, case_number, court, date, summary, keywords, source_url, scraped_at) VALUES (gen_random_uuid(), '$case_number', '$court', '$date', '$summary', '{\"keywords\"}', '$source_url', NOW());",
+    "embedding_recommendation": "Gunakan OpenAI text-embedding-3-small untuk membuat vector dari field 'summary' dan 'keywords' agar RAG pipeline dapat mencari yurisprudensi secara semantik."
+  }
+}

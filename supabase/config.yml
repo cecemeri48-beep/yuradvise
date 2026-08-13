@@ -1,0 +1,8 @@
+[
+  {
+    "project_name": "yuradvise",
+    "database": "postgres",
+    "region": "asia-east1",
+    "password": "your-supabase-password"
+  }
+]
