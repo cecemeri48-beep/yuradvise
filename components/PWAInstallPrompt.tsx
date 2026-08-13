@@ -2,14 +2,19 @@
 
 import { useEffect, useState } from 'react'
 
+interface BeforeInstallPromptEvent extends Event {
+  prompt: () => void
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
+}
+
 export default function PWAInstallPrompt() {
   const [showPrompt, setShowPrompt] = useState(false)
-  const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null)
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
 
   useEffect(() => {
     const handler = (e: Event) => {
       e.preventDefault()
-      setDeferredPrompt(e)
+      setDeferredPrompt(e as BeforeInstallPromptEvent)
       setShowPrompt(true)
     }
 
@@ -26,7 +31,7 @@ export default function PWAInstallPrompt() {
     deferredPrompt.prompt()
     const { outcome } = await deferredPrompt.userChoice
     console.log(`User response to prompt: ${outcome}`)
-    
+
     setShowPrompt(false)
     setDeferredPrompt(null)
   }
