@@ -25,22 +25,31 @@ Untuk langkah hukum selanjutnya, saya sarankan:
 
 *Disclaimer: Ini adalah saran hukum berdasarkan yurisprudensi yang ada, bukan pengganti konsultasi hukum profesional.*`
 
-    const { data: adviceData, error: adviceError } = await supabaseAdmin
-      .from('advice')
-      .insert({ 
-        query_id: case_id, 
-        advice_text: mockAdvice,
-        sources_json: JSON.stringify([
-          { type: 'yurisprudensi', title: 'Prinsip Presumsi Tak Bersalah' },
-          { type: 'regulasi', title: 'Pasal 54 KUHAP' },
-        ])
-      })
-      .select()
-      .single()
+    // Try to save to Supabase if available
+    if (supabaseAdmin) {
+      const { data: adviceData, error: adviceError } = await supabaseAdmin
+        .from('advice')
+        .insert({ 
+          query_id: case_id, 
+          advice_text: mockAdvice,
+          sources_json: JSON.stringify([
+            { type: 'yurisprudensi', title: 'Prinsip Presumsi Tak Bersalah' },
+            { type: 'regulasi', title: 'Pasal 54 KUHAP' },
+          ])
+        })
+        .select()
+        .single()
 
-    if (adviceError) throw adviceError
+      if (!adviceError && adviceData) {
+        return NextResponse.json({ advice: adviceData })
+      }
+    }
 
-    return NextResponse.json({ advice: adviceData })
+    // Fallback: return mock advice without DB storage
+    return NextResponse.json({ 
+      advice: mockAdvice,
+      note: 'Simpanan ke database dinonaktifkan (Supabase belum dikonfigurasi)'
+    })
   } catch (error) {
     console.error('Error generating advice:', error)
     return NextResponse.json({ error: 'Gagal menghasilkan advice' }, { status: 500 })
