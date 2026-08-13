@@ -48,3 +48,5 @@ yarn-error.log*
 # Scraper output
 scraper/raw_html/
 scraper/hukumonline_klinik_articles.json
+
+.vercel
