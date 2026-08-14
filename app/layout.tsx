@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
@@ -9,12 +9,6 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'YurAdvise — Asisten Hukum Gratis untuk Warga',
   description: 'Aplikasi AI-powered untuk membantu warga Indonesia mengakses bantuan hukum dasar secara gratis.',
-  themeColor: '#0284c7',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -28,6 +22,12 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
   },
   manifest: '/manifest.json',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 }
 
 export default function RootLayout({
