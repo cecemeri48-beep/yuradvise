@@ -26,16 +26,49 @@ export default function Header() {
             {/* Logo */}
             <a href="/" className="flex items-center gap-3 group">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl blur-sm opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                <div className="relative w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-lg">⚖️</span>
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl blur-md opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                
+                {/* Logo SVG */}
+                <div className="relative w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" className="w-7 h-7">
+                    <defs>
+                      <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stopColor="#fbbf24" />
+                        <stop offset="100%" stopColor="#d97706" />
+                      </linearGradient>
+                    </defs>
+                    
+                    {/* Scale base */}
+                    <rect x="86" y="110" width="20" height="50" rx="3" fill="url(#grad2)"/>
+                    
+                    {/* Scale beam */}
+                    <rect x="50" y="65" width="92" height="12" rx="6" fill="url(#grad2)"/>
+                    
+                    {/* Left pan */}
+                    <path d="M 50 77 L 30 105 Q 28 110 35 110 L 65 110 Q 72 110 70 105 L 50 77" fill="url(#grad2)" stroke="#b45309" stroke-width="1.5"/>
+                    
+                    {/* Right pan */}
+                    <path d="M 142 77 L 122 105 Q 120 110 127 110 L 157 110 Q 164 110 162 105 L 142 77" fill="url(#grad2)" stroke="#b45309" stroke-width="1.5"/>
+                    
+                    {/* Center pillar */}
+                    <rect x="88" y="55" width="16" height="18" rx="2" fill="url(#grad2)"/>
+                    
+                    {/* Blue band (digital access) */}
+                    <rect x="42" y="50" width="108" height="8" rx="4" fill="#38bdf8"/>
+                    
+                    {/* Decorative dots */}
+                    <circle cx="35" cy="108" r="4" fill="#fbbf24"/>
+                    <circle cx="157" cy="108" r="4" fill="#fbbf24"/>
+                  </svg>
                 </div>
               </div>
+              
               <div>
                 <h1 className="text-xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent">
                   BADIK
                 </h1>
-                <p className="text-xs text-gray-500 -mt-0.5">Bantuan Akses Digital untuk Informasi Keadilan</p>
+                <p className="text-xs text-gray-500 -mt-0.5 hidden sm:block">Bantuan Akses Digital untuk Informasi Keadilan</p>
               </div>
             </a>
 
