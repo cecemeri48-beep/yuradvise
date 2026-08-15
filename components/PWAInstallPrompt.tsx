@@ -42,11 +42,11 @@ export default function PWAInstallPrompt() {
     <div className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-96 bg-white rounded-xl shadow-2xl border border-gray-200 p-4 z-50">
       <div className="flex items-start gap-3">
         <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center flex-shrink-0">
-          <span className="text-white font-bold text-sm">Y</span>
+          <span className="text-white font-bold text-sm">B</span>
         </div>
         <div className="flex-1">
           <h3 className="font-semibold text-gray-900 text-sm">
-            Install YurAdvise
+            Install BADIK
           </h3>
           <p className="text-xs text-gray-500 mt-1">
             Tambahkan ke layar utama untuk akses cepat tanpa browser.

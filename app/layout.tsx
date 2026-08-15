@@ -2,17 +2,18 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import PWAInstallPrompt from '@/components/PWAInstallPrompt'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'YurAdvise — Asisten Hukum Gratis untuk Warga',
+  title: 'BADIK — Bantuan Akses Digital untuk Inteleksi Keadilan',
   description: 'Aplikasi AI-powered untuk membantu warga Indonesia mengakses bantuan hukum dasar secara gratis.',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'YurAdvise',
+    title: 'BADIK',
   },
   formatDetection: {
     telephone: false,
@@ -43,24 +44,15 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="YurAdvise" />
+        <meta name="apple-mobile-web-app-title" content="BADIK" />
       </head>
       <body className={inter.className}>
         <Header />
         <main className="min-h-screen bg-gray-50">
           {children}
         </main>
+        <Footer />
         <PWAInstallPrompt />
-        <footer className="bg-gray-800 text-white py-8 mt-16">
-          <div className="max-w-6xl mx-auto px-4 text-center">
-            <p className="text-gray-400">
-              © 2026 YurAdvise — Dibuat dengan ❤️ untuk rakyat kecil Indonesia
-            </p>
-            <p className="text-gray-500 text-sm mt-2">
-              Disclaimer: Output AI adalah referensi pendidikan, bukan pengganti konsultasi hukum profesional.
-            </p>
-          </div>
-        </footer>
       </body>
     </html>
   )

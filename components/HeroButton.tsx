@@ -8,10 +8,10 @@ export default function HeroButton({ href, label, primary = true }: HeroButtonPr
   return (
     <a
       href={href}
-      className={`px-8 py-3 rounded-lg font-medium transition-all ${
+      className={`group px-8 py-4 rounded-2xl font-semibold text-lg transition-all duration-300 ${
         primary
-          ? 'bg-primary-600 text-white hover:bg-primary-700 shadow-lg hover:shadow-xl'
-          : 'bg-white text-gray-700 border border-gray-300 hover:border-primary-500 hover:text-primary-600'
+          ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-xl hover:shadow-2xl hover:shadow-primary-500/30 hover:-translate-y-1'
+          : 'bg-white/10 backdrop-blur-sm border border-white/30 text-white hover:bg-white/20'
       }`}
     >
       {label}

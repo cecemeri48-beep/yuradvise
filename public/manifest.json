@@ -1,7 +1,7 @@
 {
-  "name": "YurAdvise",
-  "short_name": "YurAdvise",
-  "description": "Asisten Hukum Gratis untuk Warga Indonesia",
+  "name": "BADIK",
+  "short_name": "BADIK",
+  "description": "Bantuan Akses Digital untuk Inteleksi Keadilan",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
