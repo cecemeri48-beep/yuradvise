@@ -1,12 +1,13 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import LogoIcon from './LogoIcon'
 
 const stats = [
-  { value: 100, suffix: '+', label: 'Kasus Yurisprudensi', icon: '⚖️' },
-  { value: 47, suffix: '+', label: 'Artikel Hukum', icon: '📚' },
-  { value: 100, suffix: '%', label: 'Gratis Selamanya', icon: '🆓' },
-  { value: 0, suffix: '', label: 'Biaya Pendaftaran', icon: '💰' },
+  { value: 100, suffix: '+', label: 'Kasus Yurisprudensi', icon: 'cases' },
+  { value: 47, suffix: '+', label: 'Artikel Hukum', icon: 'books' },
+  { value: 100, suffix: '%', label: 'Gratis Selamanya', icon: 'free' },
+  { value: 0, suffix: '', label: 'Biaya Pendaftaran', icon: 'money' },
 ]
 
 export default function StatsSection() {
@@ -41,8 +42,16 @@ export default function StatsSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
-              <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                {stat.icon}
+              <div className="mb-3 flex justify-center">
+                {stat.icon === 'cases' ? (
+                  <LogoIcon className="w-12 h-12 group-hover:scale-110 transition-transform duration-300" />
+                ) : (
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon === 'books' && '📚'}
+                    {stat.icon === 'free' && '🆓'}
+                    {stat.icon === 'money' && '💰'}
+                  </span>
+                )}
               </div>
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                 {counts[index]}{stat.suffix}

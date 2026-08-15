@@ -1,3 +1,5 @@
+import LogoIcon from './LogoIcon'
+
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-slate-900 text-white">
@@ -6,9 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl flex items-center justify-center text-xl shadow-lg">
-                ⚖️
-              </div>
+              <LogoIcon className="w-10 h-10" />
               <div>
                 <h3 className="text-xl font-bold">BADIK</h3>
                 <p className="text-xs text-gray-400">Bantuan Akses Digital untuk Informasi Keadilan</p>

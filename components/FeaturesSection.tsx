@@ -1,6 +1,8 @@
+import LogoIcon from './LogoIcon'
+
 const features = [
   {
-    icon: '⚖️',
+    icon: <LogoIcon className="w-8 h-8" />,
     title: 'Yurisprudensi Indonesia',
     description: 'Database 100+ kasus yurisprudensi MA dan MK terkait penangkapan, kekerasan, dan HAM.',
     color: 'from-blue-500 to-cyan-500',

@@ -1,3 +1,5 @@
+import LogoIcon from './LogoIcon'
+
 export default function HeroSection() {
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -83,9 +85,7 @@ export default function HeroSection() {
               {/* Main card */}
               <div className="w-80 bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 shadow-2xl">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center text-2xl">
-                    ⚖️
-                  </div>
+                  <LogoIcon className="w-12 h-12" />
                   <div>
                     <p className="text-white font-semibold">BADIK</p>
                     <p className="text-gray-400 text-sm">Bantuan Akses Digital untuk Informasi Keadilan</p>
