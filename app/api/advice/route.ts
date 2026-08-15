@@ -46,6 +46,20 @@ const ADVICE_TEMPLATES = {
     ],
     disclaimer: 'Saran ini berdasarkan yurisprudensi keluarga yang relevan, bukan pengganti konsultasi advokat profesional.',
   },
+  ketenagakerjaan: {
+    principles: [
+      'PHK Harus Dengan Alasan Sah - Pemutusan hubungan kerja harus berdasarkan alasan yang sah sesuai UU Ketenagakerjaan',
+      'Pesangon & Hak Lainnya - Pekerja yang dirumahkan berhak atas pesangon, uang penghargaan masa kerja, dan uang penggantian hak',
+      'Bagi Hasil - Jika perusahaan rugi, PHK dapat dilakukan dengan kesepakatan bagi hasil',
+    ],
+    steps: [
+      'Kumpulkan bukti hubungan kerja (kontrak, slip gaji, surat tugas)',
+      'Hitung hak-hak Anda: pesangon, uang penghargaan masa kerja, uang penggantian hak',
+      ' ajukan gugatan ke PH (Pengadilan Hubungan Industrial) jika tidak puas dengan pesangon',
+      'Konsultasikan dengan serikat pekerja atau konsultan ketenagakerjaan',
+    ],
+    disclaimer: 'Saran ini berdasarkan yurisprudensi ketenagakerjaan yang relevan, bukan pengganti konsultasi advokat profesional.',
+  },
   default: {
     principles: [
       'Prinsip Presumsi Tak Bersalah - Setiap orang dianggap tidak bersalah hingga terbukti menurut hukum',
@@ -65,13 +79,14 @@ const ADVICE_TEMPLATES = {
 export async function POST(req: Request) {
   try {
     const body = await req.json()
-    const { question_text, category } = body
+    const { question_text, category, case_id, query_id } = body
 
     // Determine which template to use based on category
     let templateKey = 'default' as keyof typeof ADVICE_TEMPLATES
     if (category === 'pidana') templateKey = 'pidana'
     else if (category === 'perdata') templateKey = 'perdata'
     else if (category === 'keluarga') templateKey = 'keluarga'
+    else if (category === 'ketenagakerjaan') templateKey = 'ketenagakerjaan'
 
     const template = ADVICE_TEMPLATES[templateKey]
 
@@ -85,20 +100,30 @@ export async function POST(req: Request) {
       `\n\n*Disclaimer: ${template.disclaimer}*`
 
     // Try to save to Supabase if available
-    try {
-      if (supabaseAdmin && question_text) {
-        const queryId = randomUUID()
+    if (supabaseAdmin && question_text) {
+      try {
+        // Create or use query_id
+        const finalQueryId = query_id || randomUUID()
         
-        await supabaseAdmin.from('advice').insert({
-          query_id: queryId,
-          advice_text: adviceText,
-          sources_json: JSON.stringify([
-            { type: 'prinsip', title: template.principles[0] },
-          ])
-        })
+        // Insert advice record
+        const { error: adviceError } = await supabaseAdmin
+          .from('advice')
+          .insert({
+            query_id: finalQueryId,
+            advice_text: adviceText,
+            sources_json: JSON.stringify([
+              { type: 'prinsip', title: template.principles[0] },
+              { type: 'prinsip', title: template.principles[1] },
+              { type: 'prinsip', title: template.principles[2] },
+            ]),
+          })
+
+        if (adviceError) {
+          console.error('Failed to save advice:', adviceError)
+        }
+      } catch (dbError) {
+        console.log('DB insert skipped:', String(dbError))
       }
-    } catch (dbError) {
-      console.log('DB insert skipped:', String(dbError))
     }
 
     return NextResponse.json({ advice: adviceText })

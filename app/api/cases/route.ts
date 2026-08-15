@@ -31,14 +31,16 @@ export async function POST(req: Request) {
 
       if (queryError) throw queryError
 
-      return NextResponse.json({ caseId: caseData.id, queryId: queryData.id })
+      return NextResponse.json({ 
+        caseId: caseData.id, 
+        queryId: queryData.id 
+      })
     }
 
     // Fallback: return mock IDs
     return NextResponse.json({ 
       caseId: Date.now(), 
-      queryId: Date.now() + 1,
-      note: 'Data tidak disimpan (Supabase belum dikonfigurasi)'
+      queryId: Date.now() + 1
     })
   } catch (error) {
     console.error('Error creating case:', error)
