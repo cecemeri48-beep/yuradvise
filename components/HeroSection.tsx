@@ -8,20 +8,15 @@ export default function HeroSection() {
       
       {/* Premium decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Soft glow orbs - positioned for balance */}
+        {/* Soft glow orbs */}
         <div className="absolute top-20 right-20 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-900/20 rounded-full blur-3xl"></div>
         
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: 'linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)',
           backgroundSize: '80px 80px'
         }}></div>
-        
-        {/* Gold accent line */}
-        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-amber-400/20 to-transparent"></div>
-        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-amber-400/10 to-transparent"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
@@ -29,7 +24,7 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="text-center lg:text-left space-y-8">
             {/* Premium badge */}
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm text-gray-300 mb-4">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm text-gray-300">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
@@ -37,7 +32,7 @@ export default function HeroSection() {
               Layanan Hukum Premium untuk Warga Indonesia
             </div>
 
-            {/* Heading - More premium typography */}
+            {/* Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight">
               Solusi Hukum{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">
@@ -55,7 +50,7 @@ export default function HeroSection() {
               dan mendapatkan saran hukum berbasis AI secara <span className="text-amber-400 font-semibold">gratis selamanya</span>.
             </p>
 
-            {/* CTAs - Premium buttons */}
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="/mulai"
@@ -64,7 +59,7 @@ export default function HeroSection() {
                 <span className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span className="relative flex items-center gap-2">
                   Mulai Konsultasi Gratis
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
@@ -77,12 +72,12 @@ export default function HeroSection() {
               </a>
             </div>
 
-            {/* Trust indicators - Premium style */}
+            {/* Trust indicators */}
             <div className="pt-8 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-sm">
               {[
-                { icon: '✓', text: '100+ Kasus Yurisprudensi', color: 'text-emerald-400' },
-                { icon: '✓', text: 'AI-Powered Advice', color: 'text-blue-400' },
-                { icon: '✓', text: '100% Gratis', color: 'text-amber-400' },
+                { text: '100+ Kasus Yurisprudensi', color: 'text-emerald-400' },
+                { text: 'AI-Powered Advice', color: 'text-blue-400' },
+                { text: '100% Gratis', color: 'text-amber-400' },
               ].map((item, i) => (
                 <span key={i} className={`flex items-center gap-2 ${item.color}`}>
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -100,7 +95,7 @@ export default function HeroSection() {
               {/* Main premium card */}
               <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
                 {/* Gold accent border */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-400/20 via-transparent to-blue-500/20 pointer-events-none"></div>
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-400/10 via-transparent to-blue-500/10 pointer-events-none"></div>
                 
                 <div className="relative">
                   {/* Header with Logo */}
@@ -112,15 +107,15 @@ export default function HeroSection() {
                     </div>
                   </div>
                   
-                  {/* Stats - Inside the card for better positioning */}
+                  {/* Stats - Clean grid inside card */}
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-white/5 rounded-xl p-5 border border-white/10 hover:border-amber-400/30 transition-colors duration-300">
+                    <div className="bg-gradient-to-br from-amber-500/10 to-amber-600/5 rounded-2xl p-5 border border-amber-500/20">
                       <p className="text-4xl font-bold text-amber-400">100+</p>
-                      <p className="text-gray-400 text-sm mt-2 font-medium">Kasus Yurisprudensi</p>
+                      <p className="text-gray-300 text-sm mt-2 font-medium">Kasus Yurisprudensi</p>
                     </div>
-                    <div className="bg-white/5 rounded-xl p-5 border border-white/10 hover:border-emerald-400/30 transition-colors duration-300">
+                    <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 rounded-2xl p-5 border border-emerald-500/20">
                       <p className="text-4xl font-bold text-emerald-400">100%</p>
-                      <p className="text-gray-400 text-sm mt-2 font-medium">Gratis Selamanya</p>
+                      <p className="text-gray-300 text-sm mt-2 font-medium">Gratis Selamanya</p>
                     </div>
                   </div>
                   
@@ -157,21 +152,6 @@ export default function HeroSection() {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating premium badge - positioned relative to card */}
-              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl px-6 py-4 shadow-2xl border border-gray-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
-                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-gray-900">100% Gratis</p>
-                    <p className="text-gray-500 text-xs font-medium">Selamanya untuk Warga Indonesia</p>
                   </div>
                 </div>
               </div>
