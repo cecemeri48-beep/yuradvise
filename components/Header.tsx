@@ -37,55 +37,70 @@ export default function Header() {
                         <stop offset="0%" stopColor="#0ea5e9"/>
                         <stop offset="100%" stopColor="#0369a1"/>
                       </linearGradient>
-                      <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <linearGradient id="bladeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stopColor="#fcd34d"/>
-                        <stop offset="30%" stopColor="#fbbf24"/>
-                        <stop offset="70%" stopColor="#d97706"/>
+                        <stop offset="25%" stopColor="#fbbf24"/>
+                        <stop offset="50%" stopColor="#f59e0b"/>
+                        <stop offset="75%" stopColor="#d97706"/>
                         <stop offset="100%" stopColor="#b45309"/>
                       </linearGradient>
-                      <linearGradient id="goldDark2" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <linearGradient id="handleGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
                         <stop offset="0%" stopColor="#d97706"/>
-                        <stop offset="100%" stopColor="#78350f"/>
+                        <stop offset="100%" stopColor="#92400e"/>
                       </linearGradient>
-                      <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <linearGradient id="bandGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#7dd3fc"/>
                         <stop offset="50%" stopColor="#38bdf8"/>
                         <stop offset="100%" stopColor="#0284c7"/>
                       </linearGradient>
                       <filter id="shadow3D2" x="-30%" y="-30%" width="160%" height="160%">
-                        <feDropShadow dx="4" dy="6" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+                        <feDropShadow dx="6" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
                       </filter>
                     </defs>
                     
-                    {/* Background */}
-                    <circle cx="256" cy="256" r="240" fill="url(#bgGrad2)"/>
+                    <circle cx="256" cy="256" r="248" fill="url(#bgGrad2)"/>
                     
-                    {/* Sword body */}
-                    <path d="M 120 100 Q 120 280 140 380 L 200 420 L 180 440 L 100 390 Q 80 280 90 100 Z" 
-                          fill="url(#goldGrad2)" filter="url(#shadow3D2)"/>
+                    {/* Blade */}
+                    <path d="M 256 60 Q 320 60 340 120 Q 360 180 340 250 Q 320 320 280 380 L 260 400 L 252 420 L 240 400 L 232 380 Q 192 320 172 250 Q 152 180 172 120 Q 192 60 256 60 Z" 
+                          fill="url(#bladeGrad2)" stroke="#92400e" stroke-width="2"/>
+                    
+                    {/* Blade highlight */}
+                    <path d="M 256 75 Q 305 75 325 125 Q 340 180 325 245 Q 310 310 270 370 L 256 390 L 242 370 Q 202 310 187 245 Q 172 180 187 125 Q 207 75 256 75 Z" 
+                          fill="rgba(255,255,255,0.25)"/>
                     
                     {/* Handle */}
-                    <path d="M 200 380 L 340 380 Q 360 380 360 400 L 360 460 Q 360 480 340 480 L 200 480 Z" 
-                          fill="url(#goldDark2)" filter="url(#shadow3D2)"/>
+                    <path d="M 220 400 L 292 400 Q 310 400 310 415 L 310 470 Q 310 485 292 485 L 220 485 Q 202 485 202 470 L 202 415 Q 202 400 220 400 Z" 
+                          fill="url(#handleGrad2)" stroke="#78350f" stroke-width="2"/>
+                    
+                    {/* Grip lines */}
+                    <line x1="215" y1="415" x2="297" y2="415" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="212" y1="435" x2="300" y2="435" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="210" y1="455" x2="302" y2="455" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="208" y1="470" x2="304" y2="470" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
                     
                     {/* Blue band */}
-                    <rect x="200" y="420" width="160" height="25" rx="5" fill="url(#blueGrad2)" filter="url(#shadow3D2)"/>
+                    <rect x="210" y="438" width="92" height="22" rx="4" fill="url(#bandGrad2)" filter="url(#shadow3D2)"/>
                     
                     {/* Pommel */}
-                    <path d="M 180 460 L 380 460 Q 390 460 390 470 L 390 480 Q 390 490 380 490 L 180 490 Q 170 490 170 480 L 170 470 Q 170 460 180 460 Z" 
-                          fill="url(#goldGrad2)" filter="url(#shadow3D2)"/>
+                    <path d="M 215 485 L 297 485 Q 315 485 315 500 L 315 515 Q 315 530 297 530 L 215 530 Q 197 530 197 515 L 197 500 Q 197 485 215 485 Z" 
+                          fill="url(#bladeGrad2)" stroke="#92400e" stroke-width="2"/>
                     
-                    {/* Center decoration */}
-                    <circle cx="280" cy="475" r="12" fill="url(#blueGrad2)"/>
+                    {/* Center gem */}
+                    <circle cx="256" cy="507" r="14" fill="url(#bandGrad2)"/>
+                    <circle cx="256" cy="507" r="8" fill="#0ea5e9"/>
                     
-                    {/* TOP GUARD */}
-                    <path d="M 180 360 L 380 360 Q 390 360 390 370 L 390 385 Q 390 395 380 395 L 180 395 Q 170 395 170 385 L 170 370 Q 170 360 180 360 Z" 
-                          fill="url(#goldGrad2)" filter="url(#shadow3D2)"/>
+                    {/* Guard */}
+                    <path d="M 190 385 L 322 385 Q 335 385 335 395 L 335 410 Q 335 420 322 420 L 190 420 Q 177 420 177 410 L 177 395 Q 177 385 190 385 Z" 
+                          fill="url(#bladeGrad2)" stroke="#92400e" stroke-width="2" filter="url(#shadow3D2)"/>
                     
-                    {/* BADIK text */}
-                    <text x="256" y="270" text-anchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontSize="64" fontWeight="900" fill="#ffffff">
-                      BADIK
-                    </text>
+                    {/* Rivets */}
+                    <circle cx="195" cy="405" r="6" fill="#92400e"/>
+                    <circle cx="195" cy="405" r="3" fill="#fbbf24"/>
+                    <circle cx="317" cy="405" r="6" fill="#92400e"/>
+                    <circle cx="317" cy="405" r="3" fill="#fbbf24"/>
+                    
+                    {/* Text */}
+                    <text x="256" y="590" text-anchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontSize="48" fontWeight="900" fill="#ffffff">BADIK</text>
                   </svg>
                 </div>
               </div>
