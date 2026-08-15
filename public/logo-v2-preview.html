@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BADIK Logo V2 Preview</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #0369a1;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+    .logo-large {
+      width: 300px;
+      height: 300px;
+      margin-bottom: 40px;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+    }
+    .sizes {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+    .size-item {
+      text-align: center;
+    }
+    .size-item svg {
+      display: block;
+      margin: 0 auto 10px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+    }
+    .thumbnails {
+      margin-top: 60px;
+      padding-top: 40px;
+      border-top: 2px dashed #bae6fd;
+    }
+    .thumbnails h2 {
+      color: #0369a1;
+      margin-bottom: 30px;
+    }
+    .thumb-row {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .thumb-item {
+      text-align: center;
+    }
+    .thumb-item img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .thumb-label {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #64748b;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🗡️ BADIK Logo - Full Image Version</h1>
+    
+    <svg class="logo-large" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#fcd34d;stop-opacity:1" />
+          <stop offset="30%" style="stop-color:#fbbf24;stop-opacity:1" />
+          <stop offset="70%" style="stop-color:#d97706;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#b45309;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="goldDark" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#d97706;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#78350f;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#7dd3fc;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#38bdf8;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#0284c7;stop-opacity:1" />
+        </linearGradient>
+        <filter id="shadow3D" x="-30%" y="-30%" width="160%" height="160%">
+          <feDropShadow dx="4" dy="6" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+        </filter>
+        <filter id="emboss" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+          <feOffset dx="3" dy="3" result="offsetBlur"/>
+          <feSpecularLighting in="blur" surfaceScale="5" specularConstant=".75" specularExponent="20" lighting-color="#fff" result="specOut">
+            <fePointLight x="-5000" y="-10000" z="20000"/>
+          </feSpecularLighting>
+          <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+          <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litPaint"/>
+          <feDropShadow dx="3" dy="5" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+        </filter>
+      </defs>
+      
+      <circle cx="256" cy="256" r="240" fill="url(#bgGrad)" filter="url(#shadow3D)"/>
+      
+      <path d="M 120 100 Q 120 280 140 380 L 200 420 L 180 440 L 100 390 Q 80 280 90 100 Z" 
+            fill="url(#goldGrad)" filter="url(#emboss)"/>
+      
+      <path d="M 200 380 L 340 380 Q 360 380 360 400 L 360 460 Q 360 480 340 480 L 200 480 Z" 
+            fill="url(#goldDark)" filter="url(#shadow3D)"/>
+      
+      <rect x="200" y="420" width="160" height="25" rx="5" fill="url(#blueGrad)" filter="url(#shadow3D)"/>
+      
+      <path d="M 180 460 L 380 460 Q 390 460 390 470 L 390 480 Q 390 490 380 490 L 180 490 Q 170 490 170 480 L 170 470 Q 170 460 180 460 Z" 
+            fill="url(#goldGrad)" filter="url(#shadow3D)"/>
+      
+      <circle cx="280" cy="475" r="12" fill="url(#blueGrad)"/>
+      
+      <path d="M 180 360 L 380 360 Q 390 360 390 370 L 390 385 Q 390 395 380 395 L 180 395 Q 170 395 170 385 L 170 370 Q 170 360 180 360 Z" 
+            fill="url(#goldGrad)" filter="url(#shadow3D)"/>
+      
+      <text x="256" y="270" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="64" font-weight="900" fill="#ffffff">
+        BADIK
+      </text>
+    </svg>
+
+    <div class="sizes">
+      <div class="size-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="64" height="64">
+          <defs>
+            <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0ea5e9"/><stop offset="100%" style="stop-color:#0369a1"/>
+            </linearGradient>
+            <linearGradient id="gold1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#fcd34d"/><stop offset="30%" style="stop-color:#fbbf24"/><stop offset="70%" style="stop-color:#d97706"/><stop offset="100%" style="stop-color:#b45309"/>
+            </linearGradient>
+            <linearGradient id="goldDark1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#d97706"/><stop offset="100%" style="stop-color:#78350f"/>
+            </linearGradient>
+            <linearGradient id="blueGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#7dd3fc"/><stop offset="50%" style="stop-color:#38bdf8"/><stop offset="100%" style="stop-color:#0284c7"/>
+            </linearGradient>
+          </defs>
+          <circle cx="256" cy="256" r="240" fill="url(#bg1)"/>
+          <path d="M 120 100 Q 120 280 140 380 L 200 420 L 180 440 L 100 390 Q 80 280 90 100 Z" fill="url(#gold1)"/>
+          <path d="M 200 380 L 340 380 Q 360 380 360 400 L 360 460 Q 360 480 340 480 L 200 480 Z" fill="url(#goldDark1)"/>
+          <rect x="200" y="420" width="160" height="25" rx="5" fill="url(#blueGrad1)"/>
+          <path d="M 180 460 L 380 460 Q 390 460 390 470 L 390 480 Q 390 490 380 490 L 180 490 Q 170 490 170 480 L 170 470 Q 170 460 180 460 Z" fill="url(#gold1)"/>
+          <circle cx="280" cy="475" r="12" fill="url(#blueGrad1)"/>
+          <path d="M 180 360 L 380 360 Q 390 360 390 370 L 390 385 Q 390 395 380 395 L 180 395 Q 170 395 170 385 L 170 370 Q 170 360 180 360 Z" fill="url(#gold1)"/>
+          <text x="256" y="270" text-anchor="middle" font-family="Arial Black" font-size="64" font-weight="900" fill="#ffffff">BADIK</text>
+        </svg>
+        <div class="thumb-label">64px</div>
+      </div>
+      <div class="size-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="128" height="128">
+          <defs>
+            <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0ea5e9"/><stop offset="100%" style="stop-color:#0369a1"/>
+            </linearGradient>
+            <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#fcd34d"/><stop offset="30%" style="stop-color:#fbbf24"/><stop offset="70%" style="stop-color:#d97706"/><stop offset="100%" style="stop-color:#b45309"/>
+            </linearGradient>
+            <linearGradient id="goldDark2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#d97706"/><stop offset="100%" style="stop-color:#78350f"/>
+            </linearGradient>
+            <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#7dd3fc"/><stop offset="50%" style="stop-color:#38bdf8"/><stop offset="100%" style="stop-color:#0284c7"/>
+            </linearGradient>
+          </defs>
+          <circle cx="256" cy="256" r="240" fill="url(#bg2)"/>
+          <path d="M 120 100 Q 120 280 140 380 L 200 420 L 180 440 L 100 390 Q 80 280 90 100 Z" fill="url(#gold2)"/>
+          <path d="M 200 380 L 340 380 Q 360 380 360 400 L 360 460 Q 360 480 340 480 L 200 480 Z" fill="url(#goldDark2)"/>
+          <rect x="200" y="420" width="160" height="25" rx="5" fill="url(#blueGrad2)"/>
+          <path d="M 180 460 L 380 460 Q 390 460 390 470 L 390 480 Q 390 490 380 490 L 180 490 Q 170 490 170 480 L 170 470 Q 170 460 180 460 Z" fill="url(#gold2)"/>
+          <circle cx="280" cy="475" r="12" fill="url(#blueGrad2)"/>
+          <path d="M 180 360 L 380 360 Q 390 360 390 370 L 390 385 Q 390 395 380 395 L 180 395 Q 170 395 170 385 L 170 370 Q 170 360 180 360 Z" fill="url(#gold2)"/>
+          <text x="256" y="270" text-anchor="middle" font-family="Arial Black" font-size="64" font-weight="900" fill="#ffffff">BADIK</text>
+        </svg>
+        <div class="thumb-label">128px</div>
+      </div>
+      <div class="size-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
+          <defs>
+            <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0ea5e9"/><stop offset="100%" style="stop-color:#0369a1"/>
+            </linearGradient>
+            <linearGradient id="gold3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#fcd34d"/><stop offset="30%" style="stop-color:#fbbf24"/><stop offset="70%" style="stop-color:#d97706"/><stop offset="100%" style="stop-color:#b45309"/>
+            </linearGradient>
+            <linearGradient id="goldDark3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#d97706"/><stop offset="100%" style="stop-color:#78350f"/>
+            </linearGradient>
+            <linearGradient id="blueGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#7dd3fc"/><stop offset="50%" style="stop-color:#38bdf8"/><stop offset="100%" style="stop-color:#0284c7"/>
+            </linearGradient>
+          </defs>
+          <circle cx="256" cy="256" r="240" fill="url(#bg3)"/>
+          <path d="M 120 100 Q 120 280 140 380 L 200 420 L 180 440 L 100 390 Q 80 280 90 100 Z" fill="url(#gold3)"/>
+          <path d="M 200 380 L 340 380 Q 360 380 360 400 L 360 460 Q 360 480 340 480 L 200 480 Z" fill="url(#goldDark3)"/>
+          <rect x="200" y="420" width="160" height="25" rx="5" fill="url(#blueGrad3)"/>
+          <path d="M 180 460 L 380 460 Q 390 460 390 470 L 390 480 Q 390 490 380 490 L 180 490 Q 170 490 170 480 L 170 470 Q 170 460 180 460 Z" fill="url(#gold3)"/>
+          <circle cx="280" cy="475" r="12" fill="url(#blueGrad3)"/>
+          <path d="M 180 360 L 380 360 Q 390 360 390 370 L 390 385 Q 390 395 380 395 L 180 395 Q 170 395 170 385 L 170 370 Q 170 360 180 360 Z" fill="url(#gold3)"/>
+          <text x="256" y="270" text-anchor="middle" font-family="Arial Black" font-size="64" font-weight="900" fill="#ffffff">BADIK</text>
+        </svg>
+        <div class="thumb-label">192px</div>
+      </div>
+    </div>
+
+    <div class="thumbnails">
+      <h2>📱 Social Media Thumbnails</h2>
+      <div class="thumb-row">
+        <div class="thumb-item">
+          <div style="width: 1200px; height: 630px; background: linear-gradient(135deg, #0ea5e9, #0369a1); border-radius: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+            <svg width="200" height="200" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="256" cy="256" r="240" fill="#ffffff" opacity="0.1"/>
+              <path d="M 120 100 Q 120 280 140 380 L 200 420 L 180 440 L 100 390 Q 80 280 90 100 Z" fill="#fbbf24"/>
+              <path d="M 200 380 L 340 380 Q 360 380 360 400 L 360 460 Q 360 480 340 480 L 200 480 Z" fill="#d97706"/>
+              <rect x="200" y="420" width="160" height="25" rx="5" fill="#38bdf8"/>
+              <path d="M 180 460 L 380 460 Q 390 460 390 470 L 390 480 Q 390 490 380 490 L 180 490 Q 170 490 170 480 L 170 470 Q 170 460 180 460 Z" fill="#fbbf24"/>
+              <circle cx="280" cy="475" r="12" fill="#38bdf8"/>
+              <path d="M 180 360 L 380 360 Q 390 360 390 370 L 390 385 Q 390 395 380 395 L 180 395 Q 170 395 170 385 L 170 370 Q 170 360 180 360 Z" fill="#fbbf24"/>
+              <text x="256" y="270" text-anchor="middle" font-family="Arial Black" font-size="64" font-weight="900" fill="#ffffff">BADIK</text>
+            </svg>
+            <h2 style="color: #ffffff; font-size: 48px; margin-top: 20px;">BADIK</h2>
+            <p style="color: #bae6fd; font-size: 24px; margin-top: 10px;">Bantuan Akses Digital untuk Informasi Keadilan</p>
+          </div>
+          <div class="thumb-label">Facebook/Twitter (1200×630)</div>
+        </div>
+        
+        <div class="thumb-item">
+          <div style="width: 1080px; height: 1080px; background: linear-gradient(135deg, #0284c7, #0369a1); border-radius: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+            <svg width="300" height="300" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="256" cy="256" r="240" fill="#ffffff" opacity="0.1"/>
+              <path d="M 120 100 Q 120 280 140 380 L 200 420 L 180 440 L 100 390 Q 80 280 90 100 Z" fill="#fbbf24"/>
+              <path d="M 200 380 L 340 380 Q 360 380 360 400 L 360 460 Q 360 480 340 480 L 200 480 Z" fill="#d97706"/>
+              <rect x="200" y="420" width="160" height="25" rx="5" fill="#38bdf8"/>
+              <path d="M 180 460 L 380 460 Q 390 460 390 470 L 390 480 Q 390 490 380 490 L 180 490 Q 170 490 170 480 L 170 470 Q 170 460 180 460 Z" fill="#fbbf24"/>
+              <circle cx="280" cy="475" r="12" fill="#38bdf8"/>
+              <path d="M 180 360 L 380 360 Q 390 360 390 370 L 390 385 Q 390 395 380 395 L 180 395 Q 170 395 170 385 L 170 370 Q 170 360 180 360 Z" fill="#fbbf24"/>
+              <text x="256" y="270" text-anchor="middle" font-family="Arial Black" font-size="64" font-weight="900" fill="#ffffff">BADIK</text>
+            </svg>
+            <h2 style="color: #ffffff; font-size: 56px; margin-top: 20px;">BADIK</h2>
+            <p style="color: #bae6fd; font-size: 28px; margin-top: 10px;">Bantuan Akses Digital untuk Informasi Keadilan</p>
+          </div>
+          <div class="thumb-label">Instagram (1080×1080)</div>
+        </div>
+        
+        <div class="thumb-item">
+          <div style="width: 1280px; height: 720px; background: linear-gradient(135deg, #0ea5e9, #0284c7); border-radius: 12px; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 10px 40px rgba(0,0,0,0.2);">
+            <svg width="250" height="250" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="256" cy="256" r="240" fill="#ffffff" opacity="0.1"/>
+              <path d="M 120 100 Q 120 280 140 380 L 200 420 L 180 440 L 100 390 Q 80 280 90 100 Z" fill="#fbbf24"/>
+              <path d="M 200 380 L 340 380 Q 360 380 360 400 L 360 460 Q 360 480 340 480 L 200 480 Z" fill="#d97706"/>
+              <rect x="200" y="420" width="160" height="25" rx="5" fill="#38bdf8"/>
+              <path d="M 180 460 L 380 460 Q 390 460 390 470 L 390 480 Q 390 490 380 490 L 180 490 Q 170 490 170 480 L 170 470 Q 170 460 180 460 Z" fill="#fbbf24"/>
+              <circle cx="280" cy="475" r="12" fill="#38bdf8"/>
+              <path d="M 180 360 L 380 360 Q 390 360 390 370 L 390 385 Q 390 395 380 395 L 180 395 Q 170 395 170 385 L 170 370 Q 170 360 180 360 Z" fill="#fbbf24"/>
+              <text x="256" y="270" text-anchor="middle" font-family="Arial Black" font-size="64" font-weight="900" fill="#ffffff">BADIK</text>
+            </svg>
+            <h2 style="color: #ffffff; font-size: 52px; margin-top: 20px;">BADIK</h2>
+            <p style="color: #bae6fd; font-size: 26px; margin-top: 10px;">Bantuan Akses Digital untuk Informasi Keadilan</p>
+          </div>
+          <div class="thumb-label">YouTube (1280×720)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

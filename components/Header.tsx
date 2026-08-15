@@ -29,37 +29,63 @@ export default function Header() {
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl blur-md opacity-40 group-hover:opacity-60 transition-opacity"></div>
                 
-                {/* Logo SVG */}
-                <div className="relative w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" className="w-7 h-7">
+                {/* Logo SVG - Full image */}
+                <div className="relative w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-800 rounded-xl flex items-center justify-center shadow-lg overflow-hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-full h-full p-1">
                     <defs>
-                      <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stopColor="#fbbf24" />
-                        <stop offset="100%" stopColor="#d97706" />
+                      <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#0ea5e9"/>
+                        <stop offset="100%" stopColor="#0369a1"/>
                       </linearGradient>
+                      <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#fcd34d"/>
+                        <stop offset="30%" stopColor="#fbbf24"/>
+                        <stop offset="70%" stopColor="#d97706"/>
+                        <stop offset="100%" stopColor="#b45309"/>
+                      </linearGradient>
+                      <linearGradient id="goldDark2" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#d97706"/>
+                        <stop offset="100%" stopColor="#78350f"/>
+                      </linearGradient>
+                      <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#7dd3fc"/>
+                        <stop offset="50%" stopColor="#38bdf8"/>
+                        <stop offset="100%" stopColor="#0284c7"/>
+                      </linearGradient>
+                      <filter id="shadow3D2" x="-30%" y="-30%" width="160%" height="160%">
+                        <feDropShadow dx="4" dy="6" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+                      </filter>
                     </defs>
                     
-                    {/* Scale base */}
-                    <rect x="86" y="110" width="20" height="50" rx="3" fill="url(#grad2)"/>
+                    {/* Background */}
+                    <circle cx="256" cy="256" r="240" fill="url(#bgGrad2)"/>
                     
-                    {/* Scale beam */}
-                    <rect x="50" y="65" width="92" height="12" rx="6" fill="url(#grad2)"/>
+                    {/* Sword body */}
+                    <path d="M 120 100 Q 120 280 140 380 L 200 420 L 180 440 L 100 390 Q 80 280 90 100 Z" 
+                          fill="url(#goldGrad2)" filter="url(#shadow3D2)"/>
                     
-                    {/* Left pan */}
-                    <path d="M 50 77 L 30 105 Q 28 110 35 110 L 65 110 Q 72 110 70 105 L 50 77" fill="url(#grad2)" stroke="#b45309" stroke-width="1.5"/>
+                    {/* Handle */}
+                    <path d="M 200 380 L 340 380 Q 360 380 360 400 L 360 460 Q 360 480 340 480 L 200 480 Z" 
+                          fill="url(#goldDark2)" filter="url(#shadow3D2)"/>
                     
-                    {/* Right pan */}
-                    <path d="M 142 77 L 122 105 Q 120 110 127 110 L 157 110 Q 164 110 162 105 L 142 77" fill="url(#grad2)" stroke="#b45309" stroke-width="1.5"/>
+                    {/* Blue band */}
+                    <rect x="200" y="420" width="160" height="25" rx="5" fill="url(#blueGrad2)" filter="url(#shadow3D2)"/>
                     
-                    {/* Center pillar */}
-                    <rect x="88" y="55" width="16" height="18" rx="2" fill="url(#grad2)"/>
+                    {/* Pommel */}
+                    <path d="M 180 460 L 380 460 Q 390 460 390 470 L 390 480 Q 390 490 380 490 L 180 490 Q 170 490 170 480 L 170 470 Q 170 460 180 460 Z" 
+                          fill="url(#goldGrad2)" filter="url(#shadow3D2)"/>
                     
-                    {/* Blue band (digital access) */}
-                    <rect x="42" y="50" width="108" height="8" rx="4" fill="#38bdf8"/>
+                    {/* Center decoration */}
+                    <circle cx="280" cy="475" r="12" fill="url(#blueGrad2)"/>
                     
-                    {/* Decorative dots */}
-                    <circle cx="35" cy="108" r="4" fill="#fbbf24"/>
-                    <circle cx="157" cy="108" r="4" fill="#fbbf24"/>
+                    {/* TOP GUARD */}
+                    <path d="M 180 360 L 380 360 Q 390 360 390 370 L 390 385 Q 390 395 380 395 L 180 395 Q 170 395 170 385 L 170 370 Q 170 360 180 360 Z" 
+                          fill="url(#goldGrad2)" filter="url(#shadow3D2)"/>
+                    
+                    {/* BADIK text */}
+                    <text x="256" y="270" text-anchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontSize="64" fontWeight="900" fill="#ffffff">
+                      BADIK
+                    </text>
                   </svg>
                 </div>
               </div>

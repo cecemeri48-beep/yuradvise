@@ -10,6 +10,26 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'BADIK — Bantuan Akses Digital untuk Informasi Keadilan',
   description: 'Aplikasi AI-powered untuk membantu warga Indonesia mengakses bantuan hukum dasar secara gratis.',
+  openGraph: {
+    type: 'website',
+    siteName: 'BADIK',
+    title: 'BADIK — Bantuan Akses Digital untuk Informasi Keadilan',
+    description: 'Akses informasi hukum dan keadilan dengan mudah. Konsultasi hukum gratis powered by AI.',
+    images: [
+      {
+        url: '/thumbnails/og-facebook.png',
+        width: 1200,
+        height: 630,
+        alt: 'BADIK - Bantuan Akses Digital',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BADIK — Bantuan Akses Digital untuk Informasi Keadilan',
+    description: 'Akses informasi hukum dan keadilan dengan mudah. Konsultasi hukum gratis powered by AI.',
+    images: ['/thumbnails/og-facebook.png'],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
