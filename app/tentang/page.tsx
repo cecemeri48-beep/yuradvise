@@ -9,7 +9,7 @@ export default function TentangPage() {
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Tentang BADIK</h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Platform Bantuan Akses Digital untuk Inteleksi Keadilan — dikhususkan untuk warga kecil
+            Platform Bantuan Akses Digital untuk Informasi Keadilan — dikhususkan untuk warga kecil
           </p>
         </div>
 
@@ -21,7 +21,7 @@ export default function TentangPage() {
               Apa itu BADIK?
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              BADIK (Bantuan Akses Digital untuk Inteleksi Keadilan) adalah aplikasi asisten hukum berbasis AI yang dirancang khusus untuk membantu 
+              BADIK (Bantuan Akses Digital untuk Informasi Keadilan) adalah aplikasi asisten hukum berbasis AI yang dirancang khusus untuk membantu 
               warga Indonesia mengakses informasi hukum dasar secara gratis. Nama BADIK terinspirasi dari senjata tradisional Sulawesi Selatan yang melambangkan keberanian menegakkan kebenaran.
             </p>
             <p className="text-gray-700 leading-relaxed">

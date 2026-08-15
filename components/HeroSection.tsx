@@ -88,7 +88,7 @@ export default function HeroSection() {
                   </div>
                   <div>
                     <p className="text-white font-semibold">BADIK</p>
-                    <p className="text-gray-400 text-sm">Bantuan Akses Digital untuk Inteleksi Keadilan</p>
+                    <p className="text-gray-400 text-sm">Bantuan Akses Digital untuk Informasi Keadilan</p>
                   </div>
                 </div>
                 <div className="space-y-3">

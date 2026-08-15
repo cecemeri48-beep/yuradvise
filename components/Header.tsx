@@ -35,7 +35,7 @@ export default function Header() {
                 <h1 className="text-xl font-bold bg-gradient-to-r from-primary-700 to-primary-900 bg-clip-text text-transparent">
                   BADIK
                 </h1>
-                <p className="text-xs text-gray-500 -mt-0.5">Bantuan Akses Digital untuk Inteleksi Keadilan</p>
+                <p className="text-xs text-gray-500 -mt-0.5">Bantuan Akses Digital untuk Informasi Keadilan</p>
               </div>
             </a>
 

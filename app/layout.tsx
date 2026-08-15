@@ -8,7 +8,7 @@ import PWAInstallPrompt from '@/components/PWAInstallPrompt'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'BADIK — Bantuan Akses Digital untuk Inteleksi Keadilan',
+  title: 'BADIK — Bantuan Akses Digital untuk Informasi Keadilan',
   description: 'Aplikasi AI-powered untuk membantu warga Indonesia mengakses bantuan hukum dasar secara gratis.',
   appleWebApp: {
     capable: true,

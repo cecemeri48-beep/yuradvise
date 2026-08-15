@@ -11,7 +11,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-xl font-bold">BADIK</h3>
-                <p className="text-xs text-gray-400">Bantuan Akses Digital untuk Inteleksi Keadilan</p>
+                <p className="text-xs text-gray-400">Bantuan Akses Digital untuk Informasi Keadilan</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
