@@ -96,9 +96,9 @@ export default function HeroSection() {
 
           {/* Right - Premium Visual Element */}
           <div className="hidden lg:flex justify-center items-center">
-            <div className="relative">
+            <div className="relative w-full max-w-lg">
               {/* Main premium card */}
-              <div className="relative w-96 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
+              <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
                 {/* Gold accent border */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-400/20 via-transparent to-blue-500/20 pointer-events-none"></div>
                 
@@ -112,15 +112,15 @@ export default function HeroSection() {
                     </div>
                   </div>
                   
-                  {/* Stats - Better positioned */}
+                  {/* Stats - Inside the card for better positioning */}
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                      <p className="text-3xl font-bold text-amber-400">100+</p>
-                      <p className="text-gray-400 text-xs mt-1">Kasus Yurisprudensi</p>
+                    <div className="bg-white/5 rounded-xl p-5 border border-white/10 hover:border-amber-400/30 transition-colors duration-300">
+                      <p className="text-4xl font-bold text-amber-400">100+</p>
+                      <p className="text-gray-400 text-sm mt-2 font-medium">Kasus Yurisprudensi</p>
                     </div>
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                      <p className="text-3xl font-bold text-emerald-400">100%</p>
-                      <p className="text-gray-400 text-xs mt-1">Gratis Selamanya</p>
+                    <div className="bg-white/5 rounded-xl p-5 border border-white/10 hover:border-emerald-400/30 transition-colors duration-300">
+                      <p className="text-4xl font-bold text-emerald-400">100%</p>
+                      <p className="text-gray-400 text-sm mt-2 font-medium">Gratis Selamanya</p>
                     </div>
                   </div>
                   
@@ -161,31 +161,17 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Floating premium stats - Better positioned */}
-              <div className="absolute -top-8 -right-8 bg-white rounded-2xl p-5 shadow-2xl border border-gray-100 animate-float">
+              {/* Floating premium badge - positioned relative to card */}
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-2xl px-6 py-4 shadow-2xl border border-gray-100">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow-lg">
+                    <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-gray-900">100+</p>
-                    <p className="text-gray-500 text-xs font-medium">Kasus Yurisprudensi</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="absolute -bottom-8 -left-8 bg-white rounded-2xl p-5 shadow-2xl border border-gray-100 animate-float" style={{animationDelay: '1.5s'}}>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center">
-                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-emerald-600">100%</p>
-                    <p className="text-gray-500 text-xs font-medium">Gratis Selamanya</p>
+                    <p className="text-2xl font-bold text-gray-900">100% Gratis</p>
+                    <p className="text-gray-500 text-xs font-medium">Selamanya untuk Warga Indonesia</p>
                   </div>
                 </div>
               </div>
