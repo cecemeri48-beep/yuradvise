@@ -1,5 +1,20 @@
 # CHANGELOG - 2026-04-11
 
+### Fix #2 — Advice hukum detail & kontekstual dengan Claude API: Integrasi adaCODE (2026-08-17)
+- **Masalah**: Advice output masih template sederhana walau sudah tersedia `OPENAI_API_KEY` untuk adaCODE
+- **Akar**: `generateLegalAdvice()` hanya menggunakan Gemini API, tidak terintegrasi dengan adaCODE/Claude yang gratis
+- **Solusi**:
+  - Tambah fungsi `getAIProviderKey()` untuk deteksi provider AI
+  - Integrasi adaCODE API (`https://api.adacode.ai/v1`) dengan model `claude-sonnet-4-6`
+  - Prompt engineering yang lebih baik untuk konteks hukum Indonesia
+  - Multi-provider fallback: adaCODE → Gemini → template
+  - Upgrade prompt: struktur 6 bagian (Analisis, Dasar Hukum, Yurisprudensi, Langkah Praktis, Warning, Disclaimer)
+- **Verifikasi**: Build pass, API test dengan pertanyaan hukum produce output detail (500+ kata, referensi pasal spesifik)
+- **Pelajaran**: Selalu periksa provider API yang sudah tersedia sebelum membuat fallback template sederhana
+- **Hasil**: Advice sekarang menghasilkan analisis mendalam dengan referensi pasal KUHP/KUHPerdata, langkah praktis spesifik, dan warning kontekstual
+
+---
+
 ### Fix #1 — Advice hukum tetap bagus meski Gemini key tidak tersedia: Akar + Solusi
 | Tanggal | File | Masalah | Akar | Fix | Verifikasi | Pelajaran | Log Keyword | Deploy |
 |---------|------|---------|------|-----|------------|-----------|-------------|--------|
