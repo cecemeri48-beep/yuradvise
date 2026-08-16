@@ -369,7 +369,7 @@ export async function POST(req: Request) {
       if (supabaseAdmin) {
         const { data, error } = await supabaseAdmin
           .from('jurisprudence')
-          .select('case_number, court, date, summary, keywords, source_url, relevance_score')
+          .select('id, case_number, court, date, summary, keywords, source_url')
           .limit(100)
         
         if (error) {
@@ -402,12 +402,24 @@ export async function POST(req: Request) {
     if (allMatchedCases.length > 0) {
       // Use RAG-enhanced advice generation
       const ragAdvice = await generateLegalAdvice(allMatchedCases, category || 'default', question_text)
-      adviceText = ragAdvice.advice
-      noteText = ragAdvice.note
-      sources = ragAdvice.sources
-      finalConfidence = ragAdvice.confidence
-      
-      console.log(`[Advice] Generated with ${allMatchedCases.length} cases, confidence: ${finalConfidence}%`)
+
+      // Only use RAG advice if it's genuinely AI-generated (not just a simple fallback)
+      // Fallback advice has low confidence and short text
+      const isQualityAdvice = ragAdvice.confidence > 0.5 && ragAdvice.advice.length > 200
+
+      if (isQualityAdvice) {
+        adviceText = ragAdvice.advice
+        noteText = ragAdvice.note
+        sources = ragAdvice.sources
+        finalConfidence = ragAdvice.confidence
+        console.log(`[Advice] Generated with ${allMatchedCases.length} cases, confidence: ${finalConfidence}%`)
+      } else {
+        // RAG fallback is just a simple template — use the enhanced contextual advice instead
+        adviceText = buildTemplateAdvice(contextual, categoryLabel, question_text)
+        noteText = 'Rekomendasi ini berdasarkan prinsip hukum dan yurisprudensi relevan. Tingkat kepercayaan rendah karena tidak ditemukan kasus yang cocok.'
+        finalConfidence = Math.max(ragAdvice.confidence, 30)
+        console.log(`[Advice] RAG fallback detected, using enhanced template instead`)
+      }
     } else {
       // Use template-based advice as fallback
       adviceText = buildTemplateAdvice(contextual, categoryLabel, question_text)

@@ -1,5 +1,21 @@
 # CHANGELOG - 2026-04-11
-## Fixed: API Routes (Cases, Advice, Search, Jurisprudence, Logo)
+
+### Fix #1 — Advice hukum tetap bagus meski Gemini key tidak tersedia: Akar + Solusi
+| Tanggal | File | Masalah | Akar | Fix | Verifikasi | Pelajaran | Log Keyword | Deploy |
+|---------|------|---------|------|-----|------------|-----------|-------------|--------|
+| 2026-08-17 | `app/api/advice/route.ts` | Advice output jadi template sederhana setelah migrasi RAG | `generateLegalAdvice` fallback ke `generateFallbackAdvice` (5 poin sederhana) saat key tidak ada, tapi route tetap pakai hasilnya | Tambah pengecekan `isQualityAdvice` (confidence > 0.5 && length > 200). Jika bukan, pakai `buildTemplateAdvice` yang kontekstual | Build pass, logika tervalidasi | Selalu cek fallback path saat refactor API key management | `RAG fallback detected` | PENDING |
+
+---
+
+# CHANGELOG - 2026-04-11
+## Fixed: API Routes (Cases, Advice, Search, Jurisprudence, Logo) + Advice Quality
+
+### Fix #1 — Advice hukum tetap bagus meski Gemini key tidak tersedia (2026-08-17)
+- **Masalah**: Setelah migrasi RAG pipeline ke multi-provider embedding, advice output berubah dari "bagus dan menarik" menjadi "template saja"
+- **Akar**: `generateLegalAdvice()` fallback ke `generateFallbackAdvice()` (5 poin sederhana) saat `GOOGLE_GENERATIVE_AI_API_KEY` tidak tersedia, tapi `app/api/advice/route.ts` tetap menggunakan hasil fallback tersebut
+- **Solusi**: Tambah pengecekan `isQualityAdvice` (confidence > 0.5 && advice.length > 200). Jika RAG fallback terdeteksi, route otomatis beralih ke `buildTemplateAdvice()` yang menghasilkan advice kontekstual dengan prinsip hukum spesifik, langkah praktis, warning, dan tips tambahan
+- **Verifikasi**: Build pass, simulasi logika tervalidasi
+- **Pelajaran**: Saat refactor management API key, selalu verify fallback path - jangan anggap fallback AI = fallback template manual
 
 ### Changes Made
 - Fixed `connectToServer` TypeScript error in `src/services/process.ts` (removed unused params)

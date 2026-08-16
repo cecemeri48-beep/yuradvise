@@ -29,7 +29,7 @@ export async function GET(request: Request) {
     if (supabaseAdmin) {
       const { data, error } = await supabaseAdmin
         .from('jurisprudence')
-        .select('case_number, court, date, summary, keywords, source_url, relevance_score')
+        .select('id, case_number, court, date, summary, keywords, source_url')
         .limit(100)
 
       if (error) {

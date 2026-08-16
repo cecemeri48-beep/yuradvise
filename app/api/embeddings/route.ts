@@ -41,30 +41,50 @@ export async function GET() {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
     const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
     
+    console.log('DEBUG: Supabase URL present:', !!supabaseUrl)
+    console.log('DEBUG: Service key present:', !!supabaseServiceKey)
+    
     if (!supabaseUrl || !supabaseServiceKey) {
       return NextResponse.json({ error: 'Supabase not configured' }, { status: 500 })
     }
     
     const supabase = createClient(supabaseUrl, supabaseServiceKey)
     
-    const { data: total } = await supabase
+    // First, check total count
+    const { count: totalCount, error: countError } = await supabase
       .from('jurisprudence')
-      .select('id', { count: 'exact', head: true })
+      .select('*', { count: 'exact', head: true })
     
-    const { data: withEmbedding } = await supabase
+    console.log('DEBUG: Total count:', totalCount, 'Error:', countError)
+    
+    if (countError) {
+      return NextResponse.json({ error: 'Failed to get total count', details: countError.message }, { status: 500 })
+    }
+    
+    // Check how many have embeddings
+    const { count: withEmbedding, error: embedError } = await supabase
       .from('jurisprudence')
-      .select('id', { count: 'exact', head: true })
+      .select('*', { count: 'exact', head: true })
       .not('embedding', 'is', null)
     
-    const totalCount = Number(total || 0)
+    console.log('DEBUG: With embedding count:', withEmbedding, 'Error:', embedError)
+    
+    if (embedError) {
+      return NextResponse.json({ error: 'Failed to get embedding count', details: embedError.message }, { status: 500 })
+    }
+    
+    const total = Number(totalCount || 0)
     const withCount = Number(withEmbedding || 0)
     
+    console.log('DEBUG: Final stats - total:', total, 'withEmbeddings:', withCount)
+    
     return NextResponse.json({
-      total: totalCount,
+      total,
       withEmbeddings: withCount,
-      withoutEmbeddings: totalCount - withCount,
+      withoutEmbeddings: total - withCount,
     })
   } catch (error) {
+    console.error('Embeddings stats error:', error)
     return NextResponse.json(
       { error: 'Failed to get stats', details: String(error) },
       { status: 500 }

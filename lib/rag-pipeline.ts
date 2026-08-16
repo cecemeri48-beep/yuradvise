@@ -1,6 +1,7 @@
 /**
  * RAG Pipeline - Advanced Semantic Search for Legal Documents
- * Uses Google Gemini embeddings + pgvector for semantic jurisprudence search
+ * Uses Nomic/HuggingFace embeddings + pgvector for semantic jurisprudence search
+ * Fallback: Keyword-based search if no embedding API available
  */
 
 import { createClient } from '@supabase/supabase-js'
@@ -16,15 +17,21 @@ function getSupabase() {
   return createClient(supabaseUrl, supabaseServiceKey)
 }
 
-function getGeminiApiKey() {
-  return process.env.GOOGLE_GENERATIVE_AI_API_KEY || ''
+// Embedding API configuration - try multiple free providers
+function getEmbeddingApiKey() {
+  // Priority: Nomic > HuggingFace > Gemini
+  return process.env.NOMIC_API_KEY || 
+         process.env.HUGGINGFACE_API_KEY || 
+         process.env.GOOGLE_GENERATIVE_AI_API_KEY || ''
 }
 
 const _supabase = getSupabase()
-const _geminiApiKey = getGeminiApiKey()
+const _embeddingApiKey = getEmbeddingApiKey()
 
 // Configuration
-const EMBEDDING_MODEL = 'text-embedding-004' // Gemini 2.0 Flash Embedding (1536 dims)
+const EMBEDDING_PROVIDER = process.env.NOMIC_API_KEY ? 'nomic' : 
+                          process.env.HUGGINGFACE_API_KEY ? 'huggingface' : 'gemini'
+const EMBEDDING_MODEL = 'nomic-embed-text-v1' // Free, 768 dims
 const MATCH_THRESHOLD = 0.7 // Minimum cosine similarity
 const MAX_RESULTS = 5
 
@@ -64,9 +71,9 @@ export async function generateAllEmbeddings(): Promise<{
   failed: number
   errors: string[]
 }> {
-  const geminiKey = getGeminiApiKey()
-  if (!geminiKey) {
-    return { total: 0, success: 0, failed: 0, errors: ['GOOGLE_GENERATIVE_AI_API_KEY not configured'] }
+  const apiKey = getEmbeddingApiKey()
+  if (!apiKey) {
+    return { total: 0, success: 0, failed: 0, errors: ['No embedding API key configured. Using keyword fallback.'] }
   }
   
   const supabase = getSupabase()
@@ -77,7 +84,7 @@ export async function generateAllEmbeddings(): Promise<{
   // Fetch all jurisprudence without embeddings
   const { data: records, error } = await supabase
     .from('jurisprudence')
-    .select('id, case_number, court, date, summary, keywords, source_url, category')
+    .select('id, case_number, court, date, summary, keywords, source_url')
     .is('embedding', null)
 
   if (error) {
@@ -101,10 +108,9 @@ export async function generateAllEmbeddings(): Promise<{
           record.case_number,
           record.summary,
           ...(record.keywords || []),
-          ...(record.category ? [record.category] : [])
         ].join('. ')
 
-        const embedding = await generateEmbedding(textToEmbed, geminiKey)
+        const embedding = await generateEmbedding(textToEmbed, apiKey)
         
         if (embedding) {
           const { error: updateError } = await supabase
@@ -136,38 +142,86 @@ export async function generateAllEmbeddings(): Promise<{
 }
 
 /**
- * Generate embedding using Google Gemini API (FREE)
+ * Generate embedding using various free APIs with fallback
  */
 async function generateEmbedding(text: string, apiKey: string): Promise<number[] | null> {
-  try {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${EMBEDDING_MODEL}:embedContent?key=${apiKey}`,
-      {
+  // Try Nomic API first
+  if (EMBEDDING_PROVIDER === 'nomic' || process.env.NOMIC_API_KEY) {
+    try {
+      const response = await fetch('https://api.nomic.ai/v1/embeddings', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        },
         body: JSON.stringify({
-          model: `models/${EMBEDDING_MODEL}`,
-          content: {
-            parts: [{ text }],
-          },
-          taskType: 'RETRIEVAL_DOCUMENT',
-          outputDimensionality: 1536,
-        }),
+          model: 'nomic-embed-text-v1',
+          input: text
+        })
+      })
+      
+      if (response.ok) {
+        const data = await response.json()
+        return data.data?.[0]?.embedding || null
       }
-    )
-
-    if (!response.ok) {
-      const error = await response.json()
-      console.error('Gemini Embedding Error:', error)
-      return null
+    } catch (e) {
+      console.log('Nomic failed, trying next provider...')
     }
-
-    const data = await response.json()
-    return data.embedding?.values || null
-  } catch (error) {
-    console.error('Embedding generation failed:', error)
-    return null
   }
+  
+  // Try HuggingFace Inference API
+  if (EMBEDDING_PROVIDER === 'huggingface' || process.env.HUGGINGFACE_API_KEY) {
+    try {
+      const response = await fetch(
+        'https://api-inference.huggingface.co/models/sentence-transformers/all-MiniLM-L6-v2',
+        {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({ inputs: text })
+        }
+      )
+      
+      if (response.ok) {
+        const data = await response.json()
+        // HuggingFace returns array of arrays
+        return Array.isArray(data) ? data[0] : null
+      }
+    } catch (e) {
+      console.log('HuggingFace failed, trying next provider...')
+    }
+  }
+  
+  // Fallback to Gemini (last resort)
+  if (process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
+    try {
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1/models/text-embedding-004:embedContent?key=${apiKey}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            model: 'models/text-embedding-004',
+            content: {
+              parts: [{ text }],
+            },
+            taskType: 'RETRIEVAL_DOCUMENT',
+          }),
+        }
+      )
+      
+      if (response.ok) {
+        const data = await response.json()
+        return data.embedding?.values || null
+      }
+    } catch (e) {
+      console.log('Gemini failed as well')
+    }
+  }
+  
+  return null
 }
 
 /**
@@ -178,8 +232,8 @@ export async function semanticSearch(
   query: string,
   category?: string
 ): Promise<MatchedJurisprudence[]> {
-  const geminiKey = getGeminiApiKey()
-  if (!geminiKey) {
+  const apiKey = getEmbeddingApiKey()
+  if (!apiKey) {
     return keywordSearch(query, category)
   }
   
@@ -190,7 +244,7 @@ export async function semanticSearch(
 
   try {
     // Generate embedding for the query
-    const queryEmbedding = await generateEmbedding(query, geminiKey)
+    const queryEmbedding = await generateEmbedding(query, apiKey)
     
     if (!queryEmbedding) {
       return keywordSearch(query, category)
@@ -322,8 +376,8 @@ export async function generateLegalAdvice(
   sources: string[]
   confidence: number
 }> {
-  const geminiKey = getGeminiApiKey()
-  if (!geminiKey || matchedCases.length === 0) {
+  const apiKey = getEmbeddingApiKey()
+  if (!apiKey || matchedCases.length === 0) {
     return {
       advice: generateFallbackAdvice(category, question),
       note: 'RAG search unavailable. Using generic legal principles.',
@@ -357,7 +411,7 @@ Format your response clearly with headings and bullet points where appropriate.`
   try {
     // Use Google Gemini Flash for advice generation (FREE)
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${geminiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
