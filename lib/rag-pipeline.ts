@@ -20,10 +20,22 @@ function getSupabase() {
 // Embedding API configuration - try multiple free providers
 function getEmbeddingApiKey() {
   // Priority: Nomic > HuggingFace > Gemini
-  return process.env.NOMIC_API_KEY || 
-         process.env.HUGGINGFACE_API_KEY || 
+  return process.env.NOMIC_API_KEY ||
+         process.env.HUGGINGFACE_API_KEY ||
          process.env.GOOGLE_GENERATIVE_AI_API_KEY || ''
 }
+
+// AI model configuration for advice generation
+function getAIProviderKey() {
+  // Priority: adaCODE (OpenAI-compatible) > Gemini
+  return process.env.OPENAI_API_KEY ||
+         process.env.GOOGLE_GENERATIVE_AI_API_KEY || ''
+}
+
+const AI_MODEL = 'claude-sonnet-4-6' // Default free model via adaCODE
+const AI_BASE_URL = process.env.OPENAI_API_KEY
+  ? 'https://api.adacode.ai/v1' // adaCODE uses OpenAI-compatible endpoint
+  : ''
 
 const _supabase = getSupabase()
 const _embeddingApiKey = getEmbeddingApiKey()
@@ -376,82 +388,109 @@ export async function generateLegalAdvice(
   sources: string[]
   confidence: number
 }> {
-  const apiKey = getEmbeddingApiKey()
-  if (!apiKey || matchedCases.length === 0) {
+  const embeddingKey = getEmbeddingApiKey()
+  const aiKey = getAIProviderKey()
+
+  // Require both embedding API (for search) and AI provider (for advice generation)
+  if ((!embeddingKey && !aiKey) || matchedCases.length === 0) {
     return {
       advice: generateFallbackAdvice(category, question),
-      note: 'RAG search unavailable. Using generic legal principles.',
+      note: 'AI services unavailable. Using generic legal principles.',
       sources: [],
       confidence: 0.3,
     }
   }
 
   // Build context from matched cases
-  const context = matchedCases.map((c, i) => 
+  const context = matchedCases.map((c, i) =>
     `${i + 1}. ${c.case_number} (${c.court}, ${c.date})\n   ${c.summary}\n   Keywords: ${c.matched_keywords.join(', ')}`
   ).join('\n\n')
 
-  const prompt = `You are a helpful Indonesian legal assistant. Based on the following jurisprudence cases and the user's question, provide practical legal advice in Indonesian.
+  const prompt = `Anda adalah asisten hukum Indonesia yang berpengalaman. Berikan saran hukum yang detail, kontekstual, dan dapat ditindaklanjuti berdasarkan kasus yurisprudensi berikut dan pertanyaan pengguna.
 
-USER QUESTION: ${question}
-CATEGORY: ${category}
+PERTANYAAN PENGGUNA: ${question}
+KATEGORI: ${category}
 
-RELEVANT JURISPRUDENCE:
+YURISPRUDENSI RELEVAN:
 ${context}
 
-Provide your advice in Indonesian following this structure:
-1. Start with a brief analysis of the legal situation
-2. Reference the most relevant case(s)
-3. Provide actionable recommendations
-4. Include relevant legal provisions if applicable
-5. Add a disclaimer that this is informational only
+Format respons Anda dalam bahasa Indonesia yang formal namun mudah dipahami, dengan struktur:
+1. **Analisis Situasi** — ringkasan masalah hukum pengguna
+2. **Dasar Hukum** — sebutkan pasal/undang-undang yang relevan
+3. **Yurisprudensi Pendukung** — referensikan kasus pengadilan yang mirip
+4. **Langkah Praktis** — rekomendasi konkret yang bisa dilakukan (minimal 5 langkah)
+5. **⚠️ Perhatian** — warning penting yang perlu diwaspadai
+6. **Disclaimer** — pernyataan bahwa ini informasi hukum, bukan pengganti konsultasi advokat
 
-Format your response clearly with headings and bullet points where appropriate.`
+Pastikan saran bersifat spesifik untuk kasus ini, bukan template umum. Sertakan nomor pasal dan undang-undang yang tepat. Maksimal 600 kata.`
 
-  try {
-    // Use Google Gemini Flash for advice generation (FREE)
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{
-            parts: [{ text: prompt }]
-          }],
-          generationConfig: {
-            temperature: 0.3,
-            maxOutputTokens: 1000,
+  if (aiKey) {
+    try {
+      let advice = ''
+
+      // Try adaCODE (OpenAI-compatible) first
+      if (process.env.OPENAI_API_KEY) {
+        const response = await fetch(`${AI_BASE_URL}/chat/completions`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${aiKey}`,
           },
-        }),
+          body: JSON.stringify({
+            model: AI_MODEL,
+            messages: [{ role: 'user', content: prompt }],
+            temperature: 0.3,
+            max_tokens: 1000,
+          }),
+        })
+
+        if (response.ok) {
+          const data = await response.json()
+          advice = data.choices?.[0]?.message?.content || ''
+        }
       }
-    )
 
-    if (!response.ok) {
-      throw new Error('Gemini API error')
+      // Fallback to Gemini if adaCODE fails
+      if (!advice && process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
+        const response = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GOOGLE_GENERATIVE_AI_API_KEY}`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: prompt }] }],
+              generationConfig: { temperature: 0.3, maxOutputTokens: 1000 },
+            }),
+          }
+        )
+        if (response.ok) {
+          const data = await response.json()
+          advice = data.candidates?.[0]?.content?.parts?.[0]?.text || ''
+        }
+      }
+
+      if (advice && advice.trim().length > 100) {
+        const avgSimilarity = matchedCases.reduce((sum, c) => sum + c.similarity, 0) / matchedCases.length
+        const confidence = Math.round(avgSimilarity * 100)
+
+        return {
+          advice,
+          note: `Diasaskan pada ${matchedCases.length} putusan pengadilan relevan dengan tingkat kecocokan ${confidence}%`,
+          sources: matchedCases.map(c => c.source_url).filter(Boolean),
+          confidence,
+        }
+      }
+    } catch (error) {
+      console.error('AI advice generation failed:', error)
     }
+  }
 
-    const data = await response.json()
-    const advice = data.candidates?.[0]?.content?.parts?.[0]?.text || ''
-
-    // Calculate confidence based on similarity scores
-    const avgSimilarity = matchedCases.reduce((sum, c) => sum + c.similarity, 0) / matchedCases.length
-    const confidence = Math.round(avgSimilarity * 100)
-
-    return {
-      advice,
-      note: `Diasaskan pada ${matchedCases.length} putusan pengadilan relevan dengan tingkat kecocokan ${confidence}%`,
-      sources: matchedCases.map(c => c.source_url).filter(Boolean),
-      confidence,
-    }
-  } catch (error) {
-    console.error('Advice generation failed:', error)
-    return {
-      advice: generateFallbackAdvice(category, question),
-      note: 'Gagal menghasilkan advice AI. Menggunakan template hukum umum.',
-      sources: matchedCases.map(c => c.source_url).filter(Boolean),
-      confidence: 0.5,
-    }
+  // Final fallback: template-based advice
+  return {
+    advice: generateFallbackAdvice(category, question),
+    note: 'AI services unavailable. Using generic legal principles.',
+    sources: [],
+    confidence: 0.3,
   }
 }
 

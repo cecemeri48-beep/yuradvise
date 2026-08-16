@@ -3,7 +3,6 @@ import { supabaseAdmin } from '@/lib/supabase/server'
 import { AdviceSchema } from '@/lib/validators'
 import { randomUUID } from 'crypto'
 import { extractKeywords, matchJurisprudence, generateAdviceFromJurisprudence } from '@/lib/search-utils'
-import { GoogleGenerativeAI } from '@google/generative-ai'
 import { semanticSearch, generateLegalAdvice } from '@/lib/rag-pipeline'
 
 // ===== ENHANCED CASE-SPECIFIC ADVICE SYSTEM =====
@@ -427,81 +426,95 @@ export async function POST(req: Request) {
       finalConfidence = 30
     }
     
-    // AI Enhancement (optional - uses Gemini if API key is available)
+    // AI Enhancement (optional - uses adaCODE/OpenAI if API key is available)
     let aiEnhanced = false
-    const aiApiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY
-    if (aiApiKey && aiApiKey !== 'AIzaSyB7K6x7Q8yZ3vF2nJ9wX5tY8hL4mN0pQrS' && (allMatchedCases.length > 0 || contextual.principles.length > 0)) {
+    const aiApiKey = process.env.OPENAI_API_KEY
+    if (aiApiKey && (allMatchedCases.length > 0 || contextual.principles.length > 0)) {
       try {
-        const genAI = new GoogleGenerativeAI(aiApiKey)
-        const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' })
-        
-        const prompt = `Anda adalah asisten hukum Indonesia yang membantu memberikan saran hukum berdasarkan kasus nyata. 
-${ragMatchedCases.length > 0 ? `\n**Yurisprudensi dari RAG Search (Semantic):**\n${ragMatchedCases.map((c: any, i: number) => 
+        const aiBaseURL = 'https://api.adacode.ai/v1'
+        const aiModel = 'claude-sonnet-4-6'
+
+        const prompt = `Anda adalah asisten hukum Indonesia yang berpengalaman. Berikan analisis hukum yang mendalam dan kontekstual untuk kasus berikut.
+
+PERTANYAAN: "${question_text}"
+KATEGORI: ${category || 'default'}
+
+${ragMatchedCases.length > 0 ? `\n**Yurisprudensi dari RAG Search (Semantic):**\n${ragMatchedCases.map((c: any, i: number) =>
   `${i + 1}. ${c.case_number} (${c.court}, ${c.date})\n   Similarity: ${c.similarity}\n   ${c.summary}\n   Keywords: ${c.matched_keywords.join(', ')}`
 ).join('\n\n')}` : ''}
-${keywordMatchedCases.length > 0 ? `\n**Yurisprudensi dari Keyword Matching:**\n${keywordMatchedCases.map((c: any, i: number) => 
+${keywordMatchedCases.length > 0 ? `\n**Yurisprudensi dari Keyword Matching:**\n${keywordMatchedCases.map((c: any, i: number) =>
   `${i + 1}. ${c.case_number} (${c.court}, ${c.date})\n   ${c.summary}\n   Keywords: ${c.matched_keywords.join(', ')}`
 ).join('\n\n')}` : ''}
-Kategori: ${category || 'default'}
-Pertanyaan pengguna: "${question_text}"
 
 Tugasmu:
-1. Berikan penjelasan hukum yang lebih kontekstual dan spesifik untuk kasus ini
-2. Sertakan pasal/undang-undang yang relevan
+1. Berikan analisis hukum yang lebih mendalam dan kontekstual
+2. Sertakan pasal/undang-undang yang relevan secara spesifik
 3. Berikan langkah praktis yang bisa dilakukan
 4. Jika ada warning penting, sertakan
 5. Jika ada yurisprudensi yang cocok, sebutkan nomor perkaranya
-6. Sebutkan tingkat kepercayaan (confidence) berdasarkan relevansi kasus
+6. Berikan perspektif tambahan yang belum tercakup di advice utama
 
-Format respons dalam bahasa Indonesia yang formal namun mudah dipahami. Maksimal 400 kata.
+Format dalam bahasa Indonesia formal namun mudah dipahami. Maksimal 500 kata.
 
 Respons:`
-        
-        const result = await model.generateContent(prompt)
-        const response = await result.response
-        const aiText = response.text()
-        
-        if (aiText && aiText.trim().length > 50) {
-          const finalAdvice = `${adviceText}\n\n---\n\n*Analisis AI:\n${aiText.trim()}*`
-          
-          // Update saved advice if DB available
-          if (supabaseAdmin && question_text) {
-            try {
-              const finalQueryId = query_id || randomUUID()
-              await supabaseAdmin
-                .from('advice')
-                .update({ 
-                  advice_text: finalAdvice, 
-                  sources_json: JSON.stringify([
-                    ...allMatchedCases.map(c => ({ type: 'yurisprudensi', title: `${c.case_number} - ${c.court}`, similarity: c.similarity })),
-                    ...contextual.detectedKeywords.map((k: string) => ({ type: 'keyword', title: k })),
-                  ]),
-                  confidence: finalConfidence,
-                })
-                .eq('query_id', finalQueryId)
-            } catch (dbErr) {
-              console.log('DB update skipped:', String(dbErr))
+
+        const response = await fetch(`${aiBaseURL}/chat/completions`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${aiApiKey}` },
+          body: JSON.stringify({
+            model: aiModel,
+            messages: [{ role: 'user', content: prompt }],
+            temperature: 0.3,
+            max_tokens: 800,
+          }),
+        })
+
+        if (response.ok) {
+          const data = await response.json()
+          const aiText = data.choices?.[0]?.message?.content || ''
+
+          if (aiText && aiText.trim().length > 50) {
+            const finalAdvice = `${adviceText}\n\n---\n\n*Analisis AI Tambahan:\n${aiText.trim()}*`
+
+            // Update saved advice if DB available
+            if (supabaseAdmin && question_text) {
+              try {
+                const finalQueryId = query_id || randomUUID()
+                await supabaseAdmin
+                  .from('advice')
+                  .update({
+                    advice_text: finalAdvice,
+                    sources_json: JSON.stringify([
+                      ...allMatchedCases.map(c => ({ type: 'yurisprudensi', title: `${c.case_number} - ${c.court}`, similarity: c.similarity })),
+                      ...contextual.detectedKeywords.map((k: string) => ({ type: 'keyword', title: k })),
+                    ]),
+                    confidence: finalConfidence,
+                  })
+                  .eq('query_id', finalQueryId)
+              } catch (dbErr) {
+                console.log('DB update skipped:', String(dbErr))
+              }
             }
+
+            return NextResponse.json({
+              advice: finalAdvice,
+              note: noteText,
+              context: {
+                keywords: contextual.detectedKeywords,
+                matchedCases: allMatchedCases.map(c => ({
+                  case_number: c.case_number,
+                  court: c.court,
+                  summary: c.summary,
+                  matched_keywords: c.matched_keywords,
+                  similarity: c.similarity,
+                })),
+                category,
+                confidence: finalConfidence,
+                aiEnhanced: true,
+                searchMethod: ragMatchedCases.length > 0 ? 'rag_semantic' : 'keyword_fallback',
+              }
+            })
           }
-          
-          return NextResponse.json({ 
-            advice: finalAdvice,
-            note: noteText,
-            context: {
-              keywords: contextual.detectedKeywords,
-              matchedCases: allMatchedCases.map(c => ({
-                case_number: c.case_number,
-                court: c.court,
-                summary: c.summary,
-                matched_keywords: c.matched_keywords,
-                similarity: c.similarity,
-              })),
-              category,
-              confidence: finalConfidence,
-              aiEnhanced: true,
-              searchMethod: ragMatchedCases.length > 0 ? 'rag_semantic' : 'keyword_fallback',
-            }
-          })
         }
         aiEnhanced = true
       } catch (aiErr) {
