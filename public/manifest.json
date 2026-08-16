@@ -1,11 +1,11 @@
 {
   "name": "BADIK",
   "short_name": "BADIK",
-  "description": "Bantuan Akses Digital untuk Informasi Keadilan",
+  "description": "BADIK (RCS.CBS) - Bantuan Hukum AI Gratis",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0284c7",
+  "background_color": "#0b132b",
+  "theme_color": "#0b132b",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -40,6 +40,11 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
+  ],
+  "categories": ["education", "news", "legal"],
+  "lang": "id",
+  "dir": "ltr"
+}
   ],
   "categories": ["education", "news", "legal"],
   "lang": "id",

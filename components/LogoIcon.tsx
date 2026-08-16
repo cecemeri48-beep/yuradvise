@@ -1,77 +1,196 @@
-export default function LogoIcon({ className = 'w-12 h-12' }: { className?: string }) {
+export default function LogoIcon({ 
+  className = 'w-12 h-12',
+  variant = 'full',
+  showBadge = true
+}: { 
+  className?: string
+  variant?: 'full' | 'gold' | 'monochrome'
+  showBadge?: boolean
+}) {
   return (
     <div className={className}>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-full h-full">
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 512 512" 
+        className="w-full h-full drop-shadow-md"
+      >
         <defs>
-          <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#0ea5e9"/>
-            <stop offset="100%" stopColor="#0369a1"/>
+          {/* Deep Royal Sapphire background gradient */}
+          <linearGradient id="bgGradLux" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#0b132b" />
+            <stop offset="50%" stopColor="#1c2541" />
+            <stop offset="100%" stopColor="#090d16" />
           </linearGradient>
-          <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#fcd34d"/>
-            <stop offset="25%" stopColor="#fbbf24"/>
-            <stop offset="50%" stopColor="#f59e0b"/>
-            <stop offset="75%" stopColor="#d97706"/>
-            <stop offset="100%" stopColor="#b45309"/>
+
+          {/* Imperial Metallic Gold gradient */}
+          <linearGradient id="goldGradLux" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#fef08a" />
+            <stop offset="25%" stopColor="#f59e0b" />
+            <stop offset="60%" stopColor="#d97706" />
+            <stop offset="85%" stopColor="#b45309" />
+            <stop offset="100%" stopColor="#78350f" />
           </linearGradient>
-          <linearGradient id="handleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#d97706"/>
-            <stop offset="100%" stopColor="#92400e"/>
+
+          {/* Gold Shine overlay gradient */}
+          <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#ffffff" stopOpacity="0.6"/>
+            <stop offset="50%" stopColor="#fef08a" stopOpacity="0.2"/>
+            <stop offset="100%" stopColor="#d97706" stopOpacity="0"/>
           </linearGradient>
-          <linearGradient id="bandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#7dd3fc"/>
-            <stop offset="50%" stopColor="#38bdf8"/>
-            <stop offset="100%" stopColor="#0284c7"/>
+
+          {/* Emerald accent gradient */}
+          <linearGradient id="emeraldGradLux" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#34d399" />
+            <stop offset="100%" stopColor="#059669" />
           </linearGradient>
-          <filter id="shadow3D" x="-30%" y="-30%" width="160%" height="160%">
-            <feDropShadow dx="6" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+
+          {/* 3D Drop Shadow filter */}
+          <filter id="shadow3DLux" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="3" dy="5" stdDeviation="4" floodColor="#000000" floodOpacity="0.6" />
+          </filter>
+
+          {/* Glow filter */}
+          <filter id="glowLux" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="5" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
           </filter>
         </defs>
-        
-        <circle cx="256" cy="256" r="248" fill="url(#bgGrad)" filter="url(#shadow3D)"/>
-        <circle cx="256" cy="256" r="235" fill="none" stroke="url(#bandGrad)" stroke-width="3" opacity="0.6"/>
-        
-        {/* Blade */}
-        <path d="M 256 60 Q 320 60 340 120 Q 360 180 340 250 Q 320 320 280 380 L 260 400 L 252 420 L 240 400 L 232 380 Q 192 320 172 250 Q 152 180 172 120 Q 192 60 256 60 Z" 
-              fill="url(#bladeGrad)" stroke="#92400e" stroke-width="2"/>
-        
-        {/* Blade highlight */}
-        <path d="M 256 75 Q 305 75 325 125 Q 340 180 325 245 Q 310 310 270 370 L 256 390 L 242 370 Q 202 310 187 245 Q 172 180 187 125 Q 207 75 256 75 Z" 
-              fill="rgba(255,255,255,0.25)"/>
-        
-        {/* Handle */}
-        <path d="M 220 400 L 292 400 Q 310 400 310 415 L 310 470 Q 310 485 292 485 L 220 485 Q 202 485 202 470 L 202 415 Q 202 400 220 400 Z" 
-              fill="url(#handleGrad)" stroke="#78350f" stroke-width="2"/>
-        
-        {/* Grip lines */}
-        <line x1="215" y1="415" x2="297" y2="415" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
-        <line x1="212" y1="435" x2="300" y2="435" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
-        <line x1="210" y1="455" x2="302" y2="455" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
-        <line x1="208" y1="470" x2="304" y2="470" stroke="#78350f" stroke-width="3" stroke-linecap="round"/>
-        
-        {/* Blue band */}
-        <rect x="210" y="438" width="92" height="22" rx="4" fill="url(#bandGrad)" filter="url(#shadow3D)"/>
-        
-        {/* Pommel */}
-        <path d="M 215 485 L 297 485 Q 315 485 315 500 L 315 515 Q 315 530 297 530 L 215 530 Q 197 530 197 515 L 197 500 Q 197 485 215 485 Z" 
-              fill="url(#bladeGrad)" stroke="#92400e" stroke-width="2"/>
-        
-        {/* Center gem */}
-        <circle cx="256" cy="507" r="14" fill="url(#bandGrad)" filter="url(#shadow3D)"/>
-        <circle cx="256" cy="507" r="8" fill="#0ea5e9"/>
-        
-        {/* Guard */}
-        <path d="M 190 385 L 322 385 Q 335 385 335 395 L 335 410 Q 335 420 322 420 L 190 420 Q 177 420 177 410 L 177 395 Q 177 385 190 385 Z" 
-              fill="url(#bladeGrad)" stroke="#92400e" stroke-width="2" filter="url(#shadow3D)"/>
-        
-        {/* Rivets */}
-        <circle cx="195" cy="405" r="6" fill="#92400e"/>
-        <circle cx="195" cy="405" r="3" fill="#fbbf24"/>
-        <circle cx="317" cy="405" r="6" fill="#92400e"/>
-        <circle cx="317" cy="405" r="3" fill="#fbbf24"/>
-        
-        {/* Text */}
-        <text x="256" y="590" text-anchor="middle" fontFamily="Arial Black, Arial, sans-serif" fontSize="48" fontWeight="900" fill="#ffffff">BADIK</text>
+
+        {/* Outer Rounded Square Badge */}
+        {showBadge && (
+          <g>
+            <rect 
+              x="16" y="16" 
+              width="480" height="480" 
+              rx="96" ry="96" 
+              fill={variant === 'monochrome' ? '#0f172a' : 'url(#bgGradLux)'} 
+              filter="url(#shadow3DLux)"
+            />
+            {/* Outer Gold Border */}
+            <rect 
+              x="20" y="20" 
+              width="472" height="472" 
+              rx="92" ry="92" 
+              fill="none" 
+              stroke="url(#goldGradLux)" 
+              strokeWidth="3" 
+              strokeOpacity="0.7"
+            />
+            {/* Inner Subtle Ring */}
+            <rect 
+              x="30" y="30" 
+              width="452" height="452" 
+              rx="82" ry="82" 
+              fill="none" 
+              stroke="rgba(255,255,255,0.1)" 
+              strokeWidth="1.5" 
+            />
+          </g>
+        )}
+
+        {/* ===== BADIK GRAPHIC MOTIF ===== */}
+        <g filter="url(#shadow3DLux)">
+
+          {/* 1. BADIK HANDLE (GAGANG BADIK) */}
+          {/* Main Handle Curve */}
+          <path 
+            d="M 232 150 C 228 110 220 75 240 50 C 260 25 305 18 340 18 C 365 18 385 24 395 38 C 402 48 398 62 385 68 C 365 76 330 75 308 92 C 290 106 280 125 280 150 Z" 
+            fill={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'}
+          />
+          {/* Handle Highlight / Bevel */}
+          {variant !== 'monochrome' && (
+            <path 
+              d="M 242 55 C 260 32 300 25 335 25 C 360 25 378 30 384 40 C 370 44 338 52 316 68 C 296 83 285 105 282 145 L 274 145 C 274 125 284 102 300 88 C 322 70 360 70 375 62 Z" 
+              fill="url(#goldShine)"
+            />
+          )}
+          {/* Handle Ring Collar (Cincin Badik) */}
+          <rect 
+            x="226" y="138" 
+            width="60" height="14" 
+            rx="3" 
+            fill={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'} 
+            stroke="#451a03" 
+            strokeWidth="1"
+          />
+
+          {/* 2. CENTRAL EMBLEM (RCS.CBS EMBLEM BLOCK) */}
+          {/* Outer Crest Plaque */}
+          <rect 
+            x="130" y="152" 
+            width="252" height="160" 
+            rx="20" ry="20" 
+            fill={variant === 'monochrome' ? '#1e293b' : '#0b132b'} 
+            stroke={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'} 
+            strokeWidth="5"
+          />
+          {/* Inner Decorative Border */}
+          <rect 
+            x="138" y="160" 
+            width="236" height="144" 
+            rx="14" ry="14" 
+            fill="none" 
+            stroke={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'} 
+            strokeWidth="1.5" 
+            strokeDasharray="6 3"
+            strokeOpacity="0.8"
+          />
+
+          {/* BADIK Text Branding inside Emblem */}
+          <g textAnchor="middle" fill={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'}>
+            {/* BADIK Text */}
+            <text 
+              x="256" y="235" 
+              fontSize="44" 
+              fontWeight="900" 
+              fontFamily="system-ui, -apple-system, sans-serif" 
+              letterSpacing="4"
+            >
+              BADIK
+            </text>
+          </g>
+
+          {/* Corner Stud Accents on Emblem */}
+          <circle cx="152" cy="174" r="3.5" fill={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'} />
+          <circle cx="360" cy="174" r="3.5" fill={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'} />
+          <circle cx="152" cy="290" r="3.5" fill={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'} />
+          <circle cx="360" cy="290" r="3.5" fill={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'} />
+
+          {/* 3. BADIK BLADE (MATA BADIK) */}
+          {/* Main Blade Shape */}
+          <path 
+            d="M 170 312 L 342 312 L 325 365 C 300 425 272 468 256 488 C 240 468 212 425 187 365 Z" 
+            fill={variant === 'monochrome' ? '#ffffff' : 'url(#goldGradLux)'}
+          />
+
+          {/* Center Spine Line (Tulak Badik) */}
+          <line 
+            x1="256" y1="312" 
+            x2="256" y2="480" 
+            stroke="rgba(0,0,0,0.35)" 
+            strokeWidth="3" 
+            strokeLinecap="round"
+          />
+
+          {/* Left Edge Bevel Reflection */}
+          {variant !== 'monochrome' && (
+            <path 
+              d="M 256 312 L 170 312 L 187 365 C 212 425 240 468 256 488 Z" 
+              fill="rgba(255,255,255,0.18)"
+            />
+          )}
+
+          {/* Right Edge Shadow */}
+          {variant !== 'monochrome' && (
+            <path 
+              d="M 256 312 L 342 312 L 325 365 C 300 425 272 468 256 488 Z" 
+              fill="rgba(0,0,0,0.15)"
+            />
+          )}
+        </g>
       </svg>
     </div>
   )

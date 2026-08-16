@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clear Social Media Cache - BADIK</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0b132b;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #1e293b;
+      border-radius: 24px;
+      padding: 48px;
+      max-width: 560px;
+      width: 90%;
+      border: 1px solid #334155;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #f59e0b;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    p.subtitle {
+      text-align: center;
+      color: #94a3b8;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: #0f172a;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #334155;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .card:hover {
+      border-color: #f59e0b;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(245,158,11,0.15);
+    }
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .card-facebook .card-icon { background: #1877f2; }
+    .card-whatsapp .card-icon { background: #25d366; }
+    .card-linkedin .card-icon { background: #0a66c2; }
+    .card-twitter .card-icon { background: #000000; border: 1px solid #333; }
+    .card-instagram .card-icon { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+    .card-content h3 { font-size: 15px; font-weight: 600; color: #f1f5f9; }
+    .card-content p { font-size: 12px; color: #64748b; margin-top: 2px; }
+    .arrow { margin-left: auto; color: #475569; font-size: 18px; }
+    .note {
+      margin-top: 24px;
+      padding: 14px 18px;
+      background: #1e293b;
+      border-radius: 10px;
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.6;
+      border: 1px solid #334155;
+    }
+    .note strong { color: #f59e0b; }
+    .refresh-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #0b132b;
+      font-weight: 700;
+      font-size: 15px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: opacity 0.2s;
+    }
+    .refresh-btn:hover { opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔧 Clear Social Cache</h1>
+    <p class="subtitle">Klik salah satu platform di bawah untuk refresh thumbnail BADIK</p>
+
+    <a class="card card-facebook" href="https://developers.facebook.com/tools/debug/" target="_blank" rel="noopener">
+      <div class="card-icon">f</div>
+      <div class="card-content">
+        <h3>Facebook / Messenger</h3>
+        <p>Fetch and debug tool — paste yuradvise.vercel.app</p>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="card card-whatsapp" href="https://wa.me/?text=https%3A%2F%2Fyuradvise.vercel.app" target="_blank" rel="noopener">
+      <div class="card-icon">W</div>
+      <div class="card-content">
+        <h3>WhatsApp</h3>
+        <p>Kirim ulang link agar thumbnail ter-refresh</p>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="card card-linkedin" href="https://www.linkedin.com/post-inspector/inspect/https%3A%2F%2Fyuradvise.vercel.app" target="_blank" rel="noopener">
+      <div class="card-icon">in</div>
+      <div class="card-content">
+        <h3>LinkedIn</h3>
+        <p>Post inspector — scrape ulang metadata</p>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="card card-twitter" href="https://cards-dev.twitter.com/validator" target="_blank" rel="noopener">
+      <div class="card-icon">𝕏</div>
+      <div class="card-content">
+        <h3>Twitter / X</h3>
+        <p>Card validator — clear cached card</p>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="card card-instagram" href="https://business.instagram.com/?platform=web" target="_blank" rel="noopener">
+      <div class="card-icon">📷</div>
+      <div class="card-content">
+        <h3>Instagram</h3>
+        <p>Share link di story atau feed untuk refresh</p>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <button class="refresh-btn" onclick="copyLink()">📋 Salin Link BADIK</button>
+
+    <div class="note">
+      <strong>Cara kerja:</strong> Platform medsos menyimpan cache thumbnail saat pertama kali link dibagikan. Klik tool di atas, lalu paste <strong>https://yuradvise.vercel.app</strong> untuk memaksa mereka mengambil thumbnail baru. WhatsApp perlu dikirim ulang agar preview ter-refresh.
+    </div>
+  </div>
+
+  <script>
+    function copyLink() {
+      navigator.clipboard.writeText('https://yuradvise.vercel.app').then(() => {
+        const btn = document.querySelector('.refresh-btn');
+        btn.textContent = '✅ Link Tersalin!';
+        setTimeout(() => { btn.textContent = '📋 Salin Link BADIK'; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

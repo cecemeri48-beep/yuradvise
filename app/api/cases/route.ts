@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase/server'
+import { CaseSchema } from '@/lib/validators'
+import { randomUUID } from 'crypto'
 
 // Mock data for when Supabase is not available
 const mockCases = [
@@ -11,7 +13,17 @@ const mockCases = [
 export async function POST(req: Request) {
   try {
     const body = await req.json()
-    const { title, category, question } = body
+    
+    // Validate input
+    const validation = CaseSchema.safeParse(body)
+    if (!validation.success) {
+      return NextResponse.json(
+        { error: validation.error.issues[0]?.message || 'Validasi gagal' },
+        { status: 400 }
+      )
+    }
+    
+    const { title, category, question } = validation.data
 
     // If Supabase is available, use it
     if (supabaseAdmin) {
@@ -40,7 +52,7 @@ export async function POST(req: Request) {
     // Fallback: return mock IDs
     return NextResponse.json({ 
       caseId: Date.now(), 
-      queryId: Date.now() + 1
+      queryId: randomUUID()
     })
   } catch (error) {
     console.error('Error creating case:', error)

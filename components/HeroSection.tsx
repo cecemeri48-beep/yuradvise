@@ -2,155 +2,168 @@ import LogoIcon from './LogoIcon'
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Premium dark background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900"></div>
-      
-      {/* Premium decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Soft glow orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-950 via-navy-900 to-slate-900 text-white transition-colors duration-300">
+      {/* Premium ambient decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Soft glowing ambient light orbs */}
+        <div className="absolute top-12 right-12 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-10 left-10 w-[450px] h-[450px] bg-emerald-500/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/3 w-[350px] h-[350px] bg-indigo-500/10 rounded-full blur-[100px]" />
         
-        {/* Subtle grid pattern */}
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)',
-          backgroundSize: '80px 80px'
-        }}></div>
+        {/* Tech Grid Pattern */}
+        <div 
+          className="absolute inset-0 opacity-10" 
+          style={{
+            backgroundImage: 'linear-gradient(rgba(245, 158, 11, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 158, 11, 0.2) 1px, transparent 1px)',
+            backgroundSize: '70px 70px'
+          }}
+        />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left space-y-8">
-            {/* Premium badge */}
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm text-gray-300">
-              <span className="flex h-2 w-2 relative">
+          {/* Left Hero Content */}
+          <div className="text-center lg:text-left space-y-8 animate-fade-in">
+            {/* Top Official Badge */}
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-slate-900/80 backdrop-blur-xl border border-amber-500/30 rounded-full text-xs sm:text-sm text-slate-200 shadow-xl">
+              <span className="flex h-2.5 w-2.5 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
               </span>
-              Layanan Hukum Premium untuk Warga Indonesia
+              <span className="font-semibold text-amber-300">BADIK</span>
+              <span className="text-slate-400">|</span>
+              <span className="text-slate-300">Reformasi Kebijakan & Sistem Law Assistant</span>
             </div>
 
-            {/* Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight tracking-tight">
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight tracking-tight">
               Solusi Hukum{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">
-                Cerdas
+                Cerdas & Precise
               </span>
               <br />
-              <span className="text-gray-300 text-3xl md:text-4xl lg:text-5xl">
-                Untuk Rakyat Kecil
+              <span className="text-slate-200 text-3xl sm:text-4xl lg:text-5xl font-bold">
+                Untuk Keadilan Warga
               </span>
             </h1>
 
-            {/* Description */}
-            <p className="text-lg md:text-xl text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              BADIK membantu Anda memahami hak-hak hukum, menemukan yurisprudensi terkait, 
-              dan mendapatkan saran hukum berbasis AI secara <span className="text-amber-400 font-semibold">gratis selamanya</span>.
+            {/* Subheading / Description */}
+            <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+              Platform BADIK hadir membantu Anda memahami hak-hak hukum, menjelajah yurisprudensi Mahkamah Agung & MK, 
+              serta memperoleh rekomendasi hukum berbasis AI secara <span className="text-amber-400 font-bold underline decoration-amber-400/50 underline-offset-4">gratis selamanya</span>.
             </p>
 
-            {/* CTAs */}
+            {/* Primary Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="/mulai"
-                className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-white rounded-xl font-semibold text-lg shadow-2xl hover:shadow-amber-500/30 transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2 overflow-hidden"
+                className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 text-slate-950 rounded-2xl font-extrabold text-lg shadow-2xl hover:shadow-amber-500/30 transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden border border-amber-300/40"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-amber-400 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span className="relative flex items-center gap-2">
                   Mulai Konsultasi Gratis
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
               </a>
               <a
-                href="/tentang"
-                className="px-8 py-4 bg-transparent border border-white/20 text-white rounded-xl font-semibold text-lg hover:bg-white/5 backdrop-blur-sm transition-all duration-300"
+                href="/yurisprudensi"
+                className="px-8 py-4 bg-slate-900/80 border border-slate-700 hover:border-amber-400/50 text-slate-200 rounded-2xl font-bold text-lg hover:bg-slate-800/90 backdrop-blur-sm transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Pelajari Lebih Lanjut
+                <span>Cari Yurisprudensi</span>
+                <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
               </a>
             </div>
 
-            {/* Trust indicators */}
-            <div className="pt-8 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-sm">
+            {/* Key Value Propositions */}
+            <div className="pt-6 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-3 text-sm">
               {[
-                { text: '100+ Kasus Yurisprudensi', color: 'text-emerald-400' },
-                { text: 'AI-Powered Advice', color: 'text-blue-400' },
-                { text: '100% Gratis', color: 'text-amber-400' },
+                { text: '100+ Yurisprudensi MA & MK', color: 'text-emerald-400', icon: '⚖️' },
+                { text: 'AI Legal Advice', color: 'text-amber-300', icon: '🤖' },
+                { text: 'Privasi 100% Terjaga', color: 'text-cyan-300', icon: '🔒' },
               ].map((item, i) => (
-                <span key={i} className={`flex items-center gap-2 ${item.color}`}>
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
+                <span key={i} className={`flex items-center gap-2 font-semibold ${item.color}`}>
+                  <span className="text-base">{item.icon}</span>
                   {item.text}
                 </span>
               ))}
             </div>
           </div>
 
-          {/* Right - Premium Visual Element */}
-          <div className="hidden lg:flex justify-center items-center">
-            <div className="relative w-full max-w-lg">
-              {/* Main premium card */}
-              <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl">
-                {/* Gold accent border */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-amber-400/10 via-transparent to-blue-500/10 pointer-events-none"></div>
-                
-                <div className="relative">
-                  {/* Header with Logo */}
-                  <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
-                    <LogoIcon className="w-14 h-14" />
+          {/* Right - Premium Visual Emblem Card */}
+          <div className="flex justify-center items-center">
+            <div className="relative w-full max-w-md lg:max-w-lg">
+              {/* Outer Glow Halo */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 to-emerald-500 rounded-3xl blur-xl opacity-30 animate-pulse-glow" />
+
+              {/* Main Card Shell */}
+              <div className="relative bg-slate-900/90 backdrop-blur-2xl border border-amber-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl overflow-hidden">
+                {/* Background Grid accent */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
+
+                <div className="relative space-y-6">
+                  {/* Top Branding Section with RCS.CBS Emblem */}
+                  <div className="flex items-center gap-4 pb-5 border-b border-slate-800">
+                    <div className="relative w-16 h-16 rounded-2xl bg-slate-950 p-1 border border-amber-400/40 shadow-lg">
+                      <LogoIcon className="w-full h-full" />
+                    </div>
                     <div>
-                      <p className="text-white font-bold text-lg">BADIK</p>
-                      <p className="text-gray-400 text-sm">Bantuan Akses Digital untuk Informasi Keadilan</p>
+                      <h3 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-500 tracking-wider">
+                        BADIK
+                      </h3>
+                      <p className="text-xs text-slate-400 font-medium">Reformasi Kebijakan dan Sistem</p>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                        <span className="text-[11px] text-emerald-400 font-medium">Sistem Legal AI Aktif</span>
+                      </div>
                     </div>
                   </div>
-                  
-                  {/* Stats - Clean grid inside card */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-gradient-to-br from-amber-500/10 to-amber-600/5 rounded-2xl p-5 border border-amber-500/20">
-                      <p className="text-4xl font-bold text-amber-400">100+</p>
-                      <p className="text-gray-300 text-sm mt-2 font-medium">Kasus Yurisprudensi</p>
+
+                  {/* Highlights Grid */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="bg-slate-950/80 rounded-2xl p-4 border border-amber-500/20">
+                      <p className="text-3xl font-extrabold text-amber-400">100+</p>
+                      <p className="text-slate-300 text-xs mt-1 font-medium">Putusan Yurisprudensi</p>
                     </div>
-                    <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 rounded-2xl p-5 border border-emerald-500/20">
-                      <p className="text-4xl font-bold text-emerald-400">100%</p>
-                      <p className="text-gray-300 text-sm mt-2 font-medium">Gratis Selamanya</p>
+                    <div className="bg-slate-950/80 rounded-2xl p-4 border border-emerald-500/20">
+                      <p className="text-3xl font-extrabold text-emerald-400">100%</p>
+                      <p className="text-slate-300 text-xs mt-1 font-medium">Bantuan Gratis</p>
                     </div>
                   </div>
-                  
-                  {/* AI Analysis Cards */}
-                  <div className="space-y-3">
-                    <div className="bg-white/5 rounded-xl p-4 border border-white/5">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-blue-500/20 rounded-lg flex items-center justify-center text-sm flex-shrink-0">📋</div>
-                        <div>
-                          <p className="text-gray-300 text-sm">Sengketa waris tanah antar saudara...</p>
+
+                  {/* Dynamic Interactive Flow Cards */}
+                  <div className="space-y-3 pt-2">
+                    <div className="bg-slate-950/70 rounded-xl p-3.5 border border-slate-800 flex items-start gap-3">
+                      <span className="text-xl">⚖️</span>
+                      <div>
+                        <p className="text-xs text-slate-400 font-medium">Input Permasalahan Hukum:</p>
+                        <p className="text-sm text-slate-200 font-semibold">"Sengketa waris tanah sertifikat ganda..."</p>
+                      </div>
+                    </div>
+
+                    <div className="bg-amber-500/10 rounded-xl p-3.5 border border-amber-500/30 flex items-start gap-3">
+                      <span className="text-xl">🤖</span>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between">
+                          <p className="text-xs text-amber-300 font-semibold">Proses Pencocokan Yurisprudensi</p>
+                          <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full font-mono">MA & MK</span>
+                        </div>
+                        <div className="flex gap-1.5 mt-2">
+                          <div className="h-1.5 w-6 bg-amber-400 rounded-full animate-pulse" />
+                          <div className="h-1.5 w-12 bg-amber-400/60 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }} />
+                          <div className="h-1.5 w-8 bg-amber-400/40 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }} />
                         </div>
                       </div>
                     </div>
-                    
-                    <div className="bg-amber-500/10 rounded-xl p-4 border border-amber-500/20">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-amber-500/20 rounded-lg flex items-center justify-center text-sm flex-shrink-0">🤖</div>
-                        <div>
-                          <p className="text-amber-200 text-sm font-medium">Menganalisis yurisprudensi terkait...</p>
-                          <div className="flex gap-1 mt-2">
-                            <div className="h-1 w-1 bg-amber-400 rounded-full animate-bounce"></div>
-                            <div className="h-1 w-1 bg-amber-400 rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>
-                            <div className="h-1 w-1 bg-amber-400 rounded-full animate-bounce" style={{animationDelay: '0.2s'}}></div>
-                          </div>
-                        </div>
+
+                    <div className="bg-emerald-500/10 rounded-xl p-3.5 border border-emerald-500/30 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs font-bold">✓</span>
+                        <span className="text-xs text-emerald-300 font-semibold">Rekomendasi Legal Dihasilkan</span>
                       </div>
-                    </div>
-                    
-                    <div className="bg-emerald-500/10 rounded-xl p-4 border border-emerald-500/20">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center text-sm flex-shrink-0">✓</div>
-                        <div>
-                          <p className="text-emerald-200 text-sm font-medium">3 kasus relevan ditemukan</p>
-                        </div>
-                      </div>
+                      <span className="text-xs text-emerald-400 font-mono font-bold">Relevansi 98%</span>
                     </div>
                   </div>
                 </div>
@@ -160,12 +173,12 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <div className="flex flex-col items-center gap-2 text-gray-400">
-          <span className="text-xs font-medium tracking-widest uppercase">Scroll</span>
-          <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      {/* Bottom Scroll Indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:block">
+        <div className="flex flex-col items-center gap-1.5 text-slate-400">
+          <span className="text-[10px] font-bold tracking-widest uppercase text-amber-400/80">Jelajahi Fitur</span>
+          <svg className="w-5 h-5 animate-bounce text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
       </div>

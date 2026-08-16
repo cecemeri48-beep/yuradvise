@@ -13,25 +13,18 @@ interface Jurisprudence {
 }
 
 const courts = [
-  { value: '', label: 'Semua Pengadilan' },
-  { value: 'Mahkamah Agung', label: 'Mahkamah Agung' },
-  { value: 'Mahkamah Konstitusi', label: 'Mahkamah Konstitusi' },
+  { value: '', label: 'Semua Lembaga Peradilan' },
+  { value: 'Mahkamah Agung', label: 'Mahkamah Agung (MA)' },
+  { value: 'Mahkamah Konstitusi', label: 'Mahkamah Konstitusi (MK)' },
 ]
 
 const categories = [
   { value: '', label: 'Semua Kategori' },
-  { value: 'pidana', label: 'Pidana' },
-  { value: 'perdata', label: 'Perdata' },
-  { value: 'keluarga', label: 'Keluarga' },
-  { value: 'ketenagakerjaan', label: 'Ketenagakerjaan' },
+  { value: 'pidana', label: 'Hukum Pidana' },
+  { value: 'perdata', label: 'Hukum Perdata' },
+  { value: 'keluarga', label: 'Hukum Keluarga & Waris' },
+  { value: 'ketenagakerjaan', label: 'Hukum Ketenagakerjaan' },
 ]
-
-const categoryColors: Record<string, string> = {
-  pidana: 'bg-red-100 text-red-700',
-  perdata: 'bg-blue-100 text-blue-700',
-  keluarga: 'bg-purple-100 text-purple-700',
-  ketenagakerjaan: 'bg-green-100 text-green-700',
-}
 
 export default function YurisprudensiPage() {
   const [items, setItems] = useState<Jurisprudence[]>([])
@@ -72,57 +65,66 @@ export default function YurisprudensiPage() {
   const displayedItems = items.slice(0, displayCount)
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-slate-950 text-slate-100 py-12 px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+      <div className="max-w-6xl mx-auto space-y-10">
         {/* Header */}
-        <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">
-            📚 Yurisprudensi Indonesia
+        <div className="text-center space-y-3">
+          <span className="inline-block px-4 py-1.5 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-full text-xs font-bold uppercase tracking-widest">
+            Direktori Putusan Terpilih
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-black text-white tracking-tight">
+            Yurisprudensi{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500">
+              Indonesia
+            </span>
           </h1>
-          <p className="text-gray-600 text-lg">
-            Cari dan pelajari kasus-kasus yurisprudensi dari Mahkamah Agung dan Mahkamah Konstitusi
+          <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto">
+            Database putusan Mahkamah Agung dan Mahkamah Konstitusi sebagai rujukan standar keadilan.
           </p>
         </div>
 
-        {/* Search Bar */}
-        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mb-8">
+        {/* Search & Filter Bar */}
+        <div className="bg-slate-900/90 backdrop-blur-2xl rounded-3xl shadow-2xl border border-amber-500/20 p-6 sm:p-8">
           <form onSubmit={handleSearch} className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                placeholder="Cari berdasarkan keyword atau ringkasan..."
-                className="w-full px-5 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-base"
+                placeholder="Kata kunci, nomor perkara, atau perbuatan hukum..."
+                className="w-full px-5 py-3.5 bg-slate-950 border border-slate-800 rounded-2xl focus:ring-2 focus:ring-amber-500 text-sm text-white placeholder-slate-500"
               />
             </div>
+
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="px-5 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
+              className="px-4 py-3.5 bg-slate-950 border border-slate-800 rounded-2xl focus:ring-2 focus:ring-amber-500 text-sm text-slate-300 font-medium"
             >
               {categories.map((cat) => (
-                <option key={cat.value} value={cat.value}>
+                <option key={cat.value} value={cat.value} className="bg-slate-900 text-slate-200">
                   {cat.label}
                 </option>
               ))}
             </select>
+
             <select
               value={court}
               onChange={(e) => setCourt(e.target.value)}
-              className="px-5 py-3 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-primary-500 bg-white"
+              className="px-4 py-3.5 bg-slate-950 border border-slate-800 rounded-2xl focus:ring-2 focus:ring-amber-500 text-sm text-slate-300 font-medium"
             >
               {courts.map((c) => (
-                <option key={c.value} value={c.value}>
+                <option key={c.value} value={c.value} className="bg-slate-900 text-slate-200">
                   {c.label}
                 </option>
               ))}
             </select>
+
             <button
               type="submit"
-              className="px-8 py-3 bg-gradient-to-r from-primary-600 to-primary-700 text-white rounded-xl font-semibold hover:from-primary-700 hover:to-primary-800 shadow-lg transition-all"
+              className="px-8 py-3.5 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 rounded-2xl font-extrabold text-sm hover:shadow-amber-500/20 transition-all shadow-xl"
             >
-              Cari
+              Cari Putusan
             </button>
           </form>
         </div>
@@ -130,90 +132,93 @@ export default function YurisprudensiPage() {
         {/* Results */}
         {loading ? (
           <div className="text-center py-20">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 rounded-full mb-4">
-              <svg className="animate-spin h-8 w-8 text-primary-600" viewBox="0 0 24 24">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-amber-500/10 rounded-2xl border border-amber-500/30 mb-4">
+              <svg className="animate-spin h-8 w-8 text-amber-400" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
               </svg>
             </div>
-            <p className="text-gray-600 text-lg">Memuat data yurisprudensi...</p>
+            <p className="text-slate-400 text-base">Memuat direktori yurisprudensi...</p>
           </div>
         ) : items.length === 0 ? (
-          <div className="text-center py-20 bg-white rounded-2xl border border-gray-200">
-            <div className="text-6xl mb-4">🔍</div>
-            <p className="text-gray-600 text-lg">Tidak ada hasil ditemukan</p>
-            <p className="text-gray-400">Coba kata kunci lain atau ubah filter</p>
+          <div className="text-center py-20 bg-slate-900/60 rounded-3xl border border-slate-800 space-y-3">
+            <div className="text-5xl mb-2">🔍</div>
+            <h3 className="text-lg font-bold text-white">Tidak ada hasil yang sesuai</h3>
+            <p className="text-slate-400 text-sm">Gunakan istilah pencarian lain atau sesuaikan filter kategori.</p>
           </div>
         ) : (
-          <>
-            <div className="mb-6 text-gray-600">
-              Ditemukan <span className="font-semibold text-primary-600">{items.length}</span> kasus yurisprudensi
+          <div className="space-y-6">
+            <div className="flex items-center justify-between text-xs text-slate-400 px-2 font-mono">
+              <span>Menampilkan {displayedItems.length} dari {items.length} putusan</span>
             </div>
-            
+
             <div className="space-y-4">
               {displayedItems.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 hover:shadow-lg hover:border-primary-200 transition-all duration-200"
+                  className="bg-slate-900/80 rounded-3xl border border-slate-800 hover:border-amber-400/40 p-6 sm:p-8 transition-all duration-300 space-y-4 shadow-xl group"
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3 flex-wrap">
-                      <span className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold">
+                  <div className="flex items-center justify-between gap-4 flex-wrap">
+                    <div className="flex items-center gap-3">
+                      <span className="px-3.5 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full text-xs font-bold">
                         {item.court}
                       </span>
-                      <span className="text-sm text-gray-500">• {item.date}</span>
-                      {item.relevance_score && (
-                        <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-semibold">
-                          Relevansi {(item.relevance_score * 100).toFixed(0)}%
-                        </span>
-                      )}
+                      <span className="text-xs text-slate-400 font-mono">• {item.date}</span>
                     </div>
+
+                    {item.relevance_score && (
+                      <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-xs font-bold font-mono">
+                        Skor Relevansi {(item.relevance_score * 100).toFixed(0)}%
+                      </span>
+                    )}
                   </div>
-                  
-                  <h3 className="font-bold text-gray-900 text-lg mb-3">
+
+                  <h3 className="font-extrabold text-white text-xl group-hover:text-amber-300 transition-colors">
                     {item.case_number}
                   </h3>
-                  <p className="text-gray-700 leading-relaxed mb-4">
+
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
                     {item.summary}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {item.keywords.map((keyword, i) => (
-                      <span
-                        key={i}
-                        className="text-xs bg-gray-100 text-gray-600 px-3 py-1 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors cursor-pointer"
+
+                  <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
+                    <div className="flex flex-wrap gap-2">
+                      {item.keywords.map((keyword, i) => (
+                        <span
+                          key={i}
+                          className="text-xs bg-slate-950 text-slate-400 border border-slate-800 px-3 py-1 rounded-full font-medium"
+                        >
+                          #{keyword}
+                        </span>
+                      ))}
+                    </div>
+
+                    {item.source_url && (
+                      <a
+                        href={item.source_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-amber-400 hover:text-amber-300 font-bold flex items-center gap-1.5"
                       >
-                        {keyword}
-                      </span>
-                    ))}
+                        Lihat Sumber Resmi ↗
+                      </a>
+                    )}
                   </div>
-                  {item.source_url && (
-                    <a
-                      href={item.source_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 mt-4 text-sm text-primary-600 hover:text-primary-700 font-medium group"
-                    >
-                      Lihat sumber asli
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
-                  )}
                 </div>
               ))}
             </div>
 
             {displayCount < items.length && (
-              <div className="text-center mt-8">
+              <div className="text-center pt-6">
                 <button
                   onClick={() => setDisplayCount(prev => prev + 10)}
-                  className="px-8 py-3 bg-white border-2 border-primary-600 text-primary-600 rounded-xl font-semibold hover:bg-primary-50 transition-colors"
+                  className="px-8 py-3.5 bg-slate-900 border border-slate-700 hover:border-amber-400/50 text-slate-200 rounded-2xl text-sm font-bold transition-all shadow-lg"
                 >
-                  Muat Lebih Banyak ({items.length - displayCount} sisa)
+                  Muat Putusan Lainnya ({items.length - displayCount} tersisa)
                 </button>
               </div>
             )}
-          </>
+          </div>
         )}
       </div>
     </div>

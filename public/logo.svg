@@ -1,41 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0284c7;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1" />
+    <!-- Deep Royal Sapphire background gradient -->
+    <linearGradient id="bgGradLux" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b132b" />
+      <stop offset="50%" stop-color="#1c2541" />
+      <stop offset="100%" stop-color="#090d16" />
     </linearGradient>
-    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+
+    <!-- Imperial Metallic Gold gradient -->
+    <linearGradient id="goldGradLux" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="25%" stop-color="#f59e0b" />
+      <stop offset="60%" stop-color="#d97706" />
+      <stop offset="85%" stop-color="#b45309" />
+      <stop offset="100%" stop-color="#78350f" />
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.2"/>
+
+    <!-- Gold Shine overlay gradient -->
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#fef08a" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- 3D Drop Shadow filter -->
+    <filter id="shadow3DLux" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.6" />
     </filter>
   </defs>
-  
-  <!-- Background circle -->
-  <circle cx="96" cy="96" r="90" fill="url(#grad1)" filter="url(#shadow)"/>
-  
-  <!-- Scale base -->
-  <rect x="86" y="110" width="20" height="50" rx="3" fill="url(#grad2)"/>
-  
-  <!-- Scale beam -->
-  <rect x="50" y="65" width="92" height="12" rx="6" fill="url(#grad2)"/>
-  
-  <!-- Left pan -->
-  <path d="M 50 77 L 30 105 Q 28 110 35 110 L 65 110 Q 72 110 70 105 L 50 77" fill="url(#grad2)" stroke="#b45309" stroke-width="1"/>
-  
-  <!-- Right pan -->
-  <path d="M 142 77 L 122 105 Q 120 110 127 110 L 157 110 Q 164 110 162 105 L 142 77" fill="url(#grad2)" stroke="#b45309" stroke-width="1"/>
-  
-  <!-- Center pillar -->
-  <rect x="88" y="55" width="16" height="18" rx="2" fill="url(#grad2)"/>
-  
-  <!-- Blue band (representing digital/access) -->
-  <rect x="42" y="50" width="108" height="8" rx="4" fill="#0ea5e9"/>
-  
-  <!-- Decorative dots -->
-  <circle cx="35" cy="105" r="3" fill="#fbbf24"/>
-  <circle cx="157" cy="105" r="3" fill="#fbbf24"/>
+
+  <!-- Outer Rounded Square Badge -->
+  <rect x="16" y="16" width="480" height="480" rx="96" ry="96" fill="url(#bgGradLux)" filter="url(#shadow3DLux)"/>
+  <rect x="20" y="20" width="472" height="472" rx="92" ry="92" fill="none" stroke="url(#goldGradLux)" stroke-width="3" stroke-opacity="0.7"/>
+  <rect x="30" y="30" width="452" height="452" rx="82" ry="82" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" />
+
+  <!-- BADIK GRAPHIC MOTIF -->
+  <g filter="url(#shadow3DLux)">
+    <!-- 1. BADIK HANDLE (GAGANG BADIK) -->
+    <path d="M 232 150 C 228 110 220 75 240 50 C 260 25 305 18 340 18 C 365 18 385 24 395 38 C 402 48 398 62 385 68 C 365 76 330 75 308 92 C 290 106 280 125 280 150 Z" fill="url(#goldGradLux)"/>
+    <path d="M 242 55 C 260 32 300 25 335 25 C 360 25 378 30 384 40 C 370 44 338 52 316 68 C 296 83 285 105 282 145 L 274 145 C 274 125 284 102 300 88 C 322 70 360 70 375 62 Z" fill="url(#goldShine)"/>
+    <rect x="226" y="138" width="60" height="14" rx="3" fill="url(#goldGradLux)" stroke="#451a03" stroke-width="1"/>
+
+    <!-- 2. CENTRAL EMBLEM (BADIK EMBLEM BLOCK) -->
+    <rect x="130" y="152" width="252" height="160" rx="20" ry="20" fill="#0b132b" stroke="url(#goldGradLux)" stroke-width="5"/>
+    <rect x="138" y="160" width="236" height="144" rx="14" ry="14" fill="none" stroke="url(#goldGradLux)" stroke-width="1.5" stroke-dasharray="6 3" stroke-opacity="0.8"/>
+
+    <g text-anchor="middle" fill="url(#goldGradLux)">
+      <text x="256" y="235" font-size="44" font-weight="900" font-family="system-ui, -apple-system, sans-serif" letter-spacing="4">BADIK</text>
+    </g>
+
+    <circle cx="152" cy="174" r="3.5" fill="url(#goldGradLux)" />
+    <circle cx="360" cy="174" r="3.5" fill="url(#goldGradLux)" />
+    <circle cx="152" cy="290" r="3.5" fill="url(#goldGradLux)" />
+    <circle cx="360" cy="290" r="3.5" fill="url(#goldGradLux)" />
+
+    <!-- 3. BADIK BLADE (MATA BADIK) -->
+    <path d="M 170 312 L 342 312 L 325 365 C 300 425 272 468 256 488 C 240 468 212 425 187 365 Z" fill="url(#goldGradLux)"/>
+    <line x1="256" y1="312" x2="256" y2="480" stroke="rgba(0,0,0,0.35)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 256 312 L 170 312 L 187 365 C 212 425 240 468 256 488 Z" fill="rgba(255,255,255,0.18)"/>
+    <path d="M 256 312 L 342 312 L 325 365 C 300 425 272 468 256 488 Z" fill="rgba(0,0,0,0.15)"/>
+  </g>
 </svg>

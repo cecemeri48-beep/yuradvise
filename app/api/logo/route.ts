@@ -112,7 +112,7 @@ export async function GET(request: Request) {
   return new NextResponse(svg, {
     headers: {
       'Content-Type': 'image/svg+xml',
-      'Cache-Control': 'public, max-age=3600',
+      'Cache-Control': 'public, max-age=3600, immutable',
     },
   })
 }

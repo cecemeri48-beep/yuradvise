@@ -8,27 +8,27 @@ import PWAInstallPrompt from '@/components/PWAInstallPrompt'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'BADIK — Bantuan Akses Digital untuk Informasi Keadilan',
-  description: 'Aplikasi AI-powered untuk membantu warga Indonesia mengakses bantuan hukum dasar secara gratis.',
+  title: 'BADIK — RCS.CBS Reformasi Kebijakan dan Sistem',
+  description: 'BADIK (RCS.CBS) - Aplikasi AI-powered untuk membantu warga Indonesia mengakses bantuan hukum dasar secara gratis selamanya.',
   openGraph: {
     type: 'website',
     siteName: 'BADIK',
-    title: 'BADIK — Bantuan Akses Digital untuk Informasi Keadilan',
+    title: 'BADIK — RCS.CBS Reformasi Kebijakan dan Sistem',
     description: 'Akses informasi hukum dan keadilan dengan mudah. Konsultasi hukum gratis powered by AI.',
     images: [
       {
-        url: '/thumbnails/og-facebook.png',
+        url: 'https://yuradvise.vercel.app/thumbnails/og-facebook.png',
         width: 1200,
         height: 630,
-        alt: 'BADIK - Bantuan Akses Digital',
+        alt: 'BADIK - RCS.CBS',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BADIK — Bantuan Akses Digital untuk Informasi Keadilan',
+    title: 'BADIK — RCS.CBS Reformasi Kebijakan dan Sistem',
     description: 'Akses informasi hukum dan keadilan dengan mudah. Konsultasi hukum gratis powered by AI.',
-    images: ['/thumbnails/og-facebook.png'],
+    images: ['https://yuradvise.vercel.app/thumbnails/og-facebook.png'],
   },
   appleWebApp: {
     capable: true,
@@ -56,21 +56,22 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const isDark = typeof window !== 'undefined' && localStorage.getItem('badik_dark_mode') === 'true'
+  
   return (
-    <html lang="id">
+    <html lang="id" className={`scroll-smooth ${isDark ? 'dark' : ''}`}>
       <head>
-        <meta name="theme-color" content="#0284c7" />
+        <meta name="theme-color" content="#0b132b" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+        <link rel="apple-touch-icon" href="/logo.svg" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="BADIK" />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-slate-950 text-slate-100 transition-colors duration-300 antialiased`}>
         <Header />
-        <main className="min-h-screen bg-gray-50">
+        <main className="min-h-screen">
           {children}
         </main>
         <Footer />
