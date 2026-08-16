@@ -6,15 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scraper": "node scripts/seed-jurisprudence.js",
+    "import": "node scripts/import-jurisprudence.js",
+    "generate-embeddings": "node -e \"require('dotenv').config({path:'.env.local'}); const {generateAllEmbeddings} = require('./lib/rag-pipeline'); generateAllEmbeddings().then(r => console.log(JSON.stringify(r,null,2)))\""
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "@napi-rs/canvas": "^1.0.6",
     "@supabase/supabase-js": "^2.39.0",
     "autoprefixer": "^10.4.16",
+    "dotenv": "^17.4.2",
     "next": "^16.3.0",
     "openai": "^7.4.0",
+    "playwright": "^1.62.1",
     "postcss": "^8.4.32",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,10 +27,11 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^20.10.6",
+    "@types/node": "^20.19.43",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
     "sharp": "^0.35.3",
-    "typescript": "^5.3.3"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
   }
 }

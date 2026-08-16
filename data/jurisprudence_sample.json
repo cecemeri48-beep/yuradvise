@@ -1,0 +1,828 @@
+[
+  {
+    "case_number": "35/Pid.Sus/2023/PN.JKT.PUS",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2023-08-15",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana pencurian dengan pemberatan sebagaimana diatur dalam Pasal 363 KUHP. Pengadilan mempertimbangkan bahwa terdakwa merupakan pengulang kejahatan dan menggunakan alat untuk membuka kunci mobil korban. Terdakwa dihukum penjara 3 tahun dan denda Rp 5.000.000 subsider 3 bulan kurungan.",
+    "keywords": [
+      "pencurian",
+      "mobil",
+      "KUHP Pasal 363",
+      "pemberatan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "12/Pdt.Gugatan/2023/PN.SMG",
+    "court": "Pengadilan Negeri Semarang",
+    "date": "2023-06-20",
+    "summary": "Gugatan wanprestasi terhadap perjanjian kredit mobil. Pengadilan memvonis tergugatan (perusahaan leasing) kalah dan wajib mengembalikan uang muka yang sudah dibayar sebesar Rp 25.000.000. Pengadilan menyatakan bahwa tergugatan telah melakukan wanprestasi dengan menyita kendaraan tanpa prosedur yang sah sesuai Pasal 1243 KUHPerdata.",
+    "keywords": [
+      "wanprestasi",
+      "kredit mobil",
+      "leasing",
+      "KUHPerdata Pasal 1243",
+      "sita kendaraan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "01/Penung/2023/PA.JKT",
+    "court": "Pengadilan Agama Jakarta",
+    "date": "2023-07-10",
+    "summary": "Pengadilan mengabulkan gugatan cerai talak yang diajukan oleh suami. Putusan menyatakan bahwa hubungan suami istri sudah tidak dapat dipertahankan lagi berdasarkan Pasal 39 UU No. 1/1974. Hak asuh anak ditetapkan kepada ibu karena anak masih di bawah 5 tahun sesuai Pasal 93 KHI. Suami diwajibkan membayar nafkah anak Rp 2.000.000 per bulan.",
+    "keywords": [
+      "cerai talak",
+      "hak asuh anak",
+      "KHI Pasal 93",
+      "UU Perkawinan",
+      "nafkah anak"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "1/P.Nispi/2023/PHI.JKT",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2023-09-05",
+    "summary": "Pengadilan mengabulkan gugatan pekerja atas pemutusan hubungan kerja yang tidak sah. Pengadilan memvonis perusahaan membayar pesangon sebesar Rp 45.000.000, uang penghargaan masa kerja Rp 12.000.000, dan uang penggantian hak Rp 5.000.000 sesuai PP No. 35/2021. PHK dinyatakan batal demi hukum.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PHI",
+      "PP No. 35/2021",
+      "pekerja",
+      "buruh"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "98/Pid.B/2023/PN.SBY",
+    "court": "Pengadilan Negeri Surabaya",
+    "date": "2023-05-18",
+    "summary": "Terdakwa terbukti secara sah dan meyakinkan melakukan tindak pidana penipuan berupa pemalsuan dokumen sertifikat tanah. Terdakwa ditangkap dengan barang bukti uang Rp 500.000.000 hasil penipuan. Vonis penjara 4 tahun dan denda Rp 10.000.000 subsider 4 bulan kurungan sesuai Pasal 378 KUHP.",
+    "keywords": [
+      "penipuan",
+      "pemalsuan sertifikat",
+      "UU ITE",
+      "Pasal 378 KUHP"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "56/Pdt/Pemela/2023/PN.JKT",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2023-04-22",
+    "summary": "Sengketa waris antara ahli waris terkait pembagian harta peninggalan. Pengadilan menetapkan pembagian warisan sesuai KUHPerdata Pasal 823-1084. Ahli waris anak sah mendapat bagian 1/2, anak luar kawin mendapat 1/3, dan istri mendapat hak pakai. Sengketa diselesaikan melalui mediasi.",
+    "keywords": [
+      "waris",
+      "warisan",
+      "KUHPerdata Pasal 823",
+      "ahli waris",
+      "pembagian harta"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "20/Pid.B/2023/PN.BTN",
+    "court": "Pengadilan Negeri Banten",
+    "date": "2023-03-30",
+    "summary": "Terdakwa dihukum 2 tahun penjara karena melakukan penganiayaan ringan sebagaimana diatur dalam Pasal 351 ayat (2) KUHP. Tersangka mengakui perbuatannya dan telah dimaafkan oleh korban. Vonis ringan diterapkan karena adanya unsur pengurangan hukuman.",
+    "keywords": [
+      "penganiayaan",
+      "Pasal 351 KUHP",
+      "delik aduan",
+      "corporal injury"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "88/Pdt/Gugatan/2023/PN.Mdg",
+    "court": "Pengadilan Negeri Magelang",
+    "date": "2023-02-14",
+    "summary": "Gugatan sengketa tanah antara dua pihak terkait batas wilayah dan sertifikat. Pengadilan memerintahkan survei ulang oleh tim ahli tanah. Gugatan sebagian dikabulkan, putusan menyatakan sertifikat tergugat batal demi hukum karena diterbitkan tanpa prosedur yang sah.",
+    "keywords": [
+      "sengketa tanah",
+      "sertifikat",
+      "UUPA",
+      "survei tanah",
+      "batas wilayah"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "269/Pid.Gugatan/2023/PN.JKT",
+    "court": "Pengadilan Agama Surabaya",
+    "date": "2022-01-27",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait sengketa tanah yang diatur dalam sertifikat.",
+    "keywords": [
+      "sengketa tanah",
+      "sertifikat",
+      "UUPA"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "147/Pid.Sus/2021/PN.YGY",
+    "court": "Pengadilan Negeri Surabaya",
+    "date": "2022-05-11",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait pencurian yang diatur dalam KUHP Pasal 362.",
+    "keywords": [
+      "pencurian",
+      "KUHP Pasal 362",
+      "mencuri"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "383/Pid.Gugatan/2022/PN.JKT",
+    "court": "Pengadilan Negeri Bandung",
+    "date": "2020-05-03",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait korupsi yang diatur dalam UU Tipikor.",
+    "keywords": [
+      "korupsi",
+      "UU Tipikor",
+      "suap"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "616/Pid.Sus/2020/PN.SBY",
+    "court": "Pengadilan Negeri Surabaya",
+    "date": "2021-02-24",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait penipuan yang diatur dalam KUHP Pasal 378.",
+    "keywords": [
+      "penipuan",
+      "KUHP Pasal 378",
+      "penipuan digital"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "210/Pid.Sus/2021/PN.SBY",
+    "court": "Pengadilan Negeri Yogyakarta",
+    "date": "2022-06-09",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait pencurian yang diatur dalam KUHP Pasal 362.",
+    "keywords": [
+      "pencurian",
+      "KUHP Pasal 362",
+      "mencuri"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "907/Pid.Gugatan/2020/PN.YGY",
+    "court": "Pengadilan Negeri Surabaya",
+    "date": "2021-09-08",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait penipuan yang diatur dalam KUHP Pasal 378.",
+    "keywords": [
+      "penipuan",
+      "KUHP Pasal 378",
+      "penipuan digital"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "920/Pid.Gugatan/2021/PN.BDG",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2021-05-27",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait narkotika yang diatur dalam UU Narkotika.",
+    "keywords": [
+      "narkotika",
+      "UU Narkotika",
+      "pasal 127"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "7/Pid.Sus/2023/PN.SMG",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2021-08-17",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait penipuan yang diatur dalam KUHP Pasal 378.",
+    "keywords": [
+      "penipuan",
+      "KUHP Pasal 378",
+      "penipuan digital"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "571/Pid.Gugatan/2022/PN.SMG",
+    "court": "Pengadilan Negeri Bandung",
+    "date": "2021-07-15",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait wanprestasi yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "wanprestasi",
+      "KUHPerdata",
+      "perjanjian kredit"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "903/Pid.Gugatan/2023/PN.BDG",
+    "court": "Pengadilan Negeri Bandung",
+    "date": "2023-01-12",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "440/Pid.Gugatan/2021/PN.JKT",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2023-05-27",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait wanprestasi yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "wanprestasi",
+      "KUHPerdata",
+      "perjanjian kredit"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "709/Pid.Gugatan/2020/PN.JKT",
+    "court": "Pengadilan Negeri Bandung",
+    "date": "2020-06-18",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait perceraian yang diatur dalam KHI.",
+    "keywords": [
+      "perceraian",
+      "KHI",
+      "UU Perkawinan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "917/Pid.Gugatan/2023/PN.SMG",
+    "court": "Pengadilan Agama Surabaya",
+    "date": "2023-06-19",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait perceraian yang diatur dalam KHI.",
+    "keywords": [
+      "perceraian",
+      "KHI",
+      "UU Perkawinan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "171/Pid.Sus/2023/PN.JKT",
+    "court": "Pengadilan Negeri Surabaya",
+    "date": "2021-05-15",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait penganiayaan yang diatur dalam KUHP Pasal 351.",
+    "keywords": [
+      "penganiayaan",
+      "KUHP Pasal 351",
+      "kekerasan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "818/Pid.Gugatan/2023/PN.SMG",
+    "court": "Pengadilan Tipikor Jakarta",
+    "date": "2023-09-12",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "395/Pid.Sus/2021/PN.BDG",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2023-07-21",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait penganiayaan yang diatur dalam KUHP Pasal 351.",
+    "keywords": [
+      "penganiayaan",
+      "KUHP Pasal 351",
+      "kekerasan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "436/Pid.Gugatan/2023/PN.YGY",
+    "court": "Pengadilan Agama Jakarta",
+    "date": "2023-02-18",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait perceraian yang diatur dalam KHI.",
+    "keywords": [
+      "perceraian",
+      "KHI",
+      "UU Perkawinan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "769/Pid.Sus/2021/PN.JKT",
+    "court": "Pengadilan Negeri Surabaya",
+    "date": "2020-10-02",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait pencurian yang diatur dalam KUHP Pasal 362.",
+    "keywords": [
+      "pencurian",
+      "KUHP Pasal 362",
+      "mencuri"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "454/Pid.Gugatan/2020/PN.JKT",
+    "court": "Pengadilan Agama Jakarta",
+    "date": "2023-03-12",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait wanprestasi yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "wanprestasi",
+      "KUHPerdata",
+      "perjanjian kredit"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "947/Pid.Gugatan/2023/PN.SMG",
+    "court": "Pengadilan Negeri Semarang",
+    "date": "2022-02-19",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "983/Pid.Gugatan/2023/PN.JKT",
+    "court": "Pengadilan Agama Surabaya",
+    "date": "2022-11-24",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "18/Pid.Gugatan/2021/PN.SMG",
+    "court": "Pengadilan Agama Jakarta",
+    "date": "2023-08-05",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "550/Pid.Sus/2021/PN.BDG",
+    "court": "Pengadilan Agama Jakarta",
+    "date": "2020-06-24",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait penganiayaan yang diatur dalam KUHP Pasal 351.",
+    "keywords": [
+      "penganiayaan",
+      "KUHP Pasal 351",
+      "kekerasan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "210/Pid.Gugatan/2020/PN.JKT",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2020-04-23",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait waris yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "waris",
+      "KUHPerdata",
+      "ahli waris"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "284/Pid.Sus/2021/PN.SBY",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2021-02-09",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait wanprestasi yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "wanprestasi",
+      "KUHPerdata",
+      "perjanjian kredit"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "948/Pid.Gugatan/2023/PN.SMG",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2022-05-02",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait penganiayaan yang diatur dalam KUHP Pasal 351.",
+    "keywords": [
+      "penganiayaan",
+      "KUHP Pasal 351",
+      "kekerasan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "396/Pid.Gugatan/2021/PN.SMG",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2021-12-14",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait korupsi yang diatur dalam UU Tipikor.",
+    "keywords": [
+      "korupsi",
+      "UU Tipikor",
+      "suap"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "799/Pid.Sus/2021/PN.SBY",
+    "court": "Pengadilan Tipikor Jakarta",
+    "date": "2022-07-19",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait perceraian yang diatur dalam KHI.",
+    "keywords": [
+      "perceraian",
+      "KHI",
+      "UU Perkawinan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "420/Pid.Gugatan/2020/PN.JKT",
+    "court": "Pengadilan Agama Jakarta",
+    "date": "2022-10-23",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait pencurian yang diatur dalam KUHP Pasal 362.",
+    "keywords": [
+      "pencurian",
+      "KUHP Pasal 362",
+      "mencuri"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "369/Pid.Gugatan/2020/PN.JKT",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2023-04-07",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait narkotika yang diatur dalam UU Narkotika.",
+    "keywords": [
+      "narkotika",
+      "UU Narkotika",
+      "pasal 127"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "185/Pid.Gugatan/2020/PN.YGY",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2023-07-21",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait pencurian yang diatur dalam KUHP Pasal 362.",
+    "keywords": [
+      "pencurian",
+      "KUHP Pasal 362",
+      "mencuri"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "147/Pid.Gugatan/2020/PN.BDG",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2023-08-28",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait wanprestasi yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "wanprestasi",
+      "KUHPerdata",
+      "perjanjian kredit"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "972/Pid.Gugatan/2023/PN.JKT",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2020-08-12",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "866/Pid.Sus/2020/PN.YGY",
+    "court": "Pengadilan Negeri Yogyakarta",
+    "date": "2021-09-24",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "221/Pid.Gugatan/2020/PN.BDG",
+    "court": "Pengadilan Negeri Bandung",
+    "date": "2021-06-06",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait waris yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "waris",
+      "KUHPerdata",
+      "ahli waris"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "513/Pid.Sus/2023/PN.JKT",
+    "court": "Pengadilan Negeri Semarang",
+    "date": "2022-09-28",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait waris yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "waris",
+      "KUHPerdata",
+      "ahli waris"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "273/Pid.Sus/2023/PN.YGY",
+    "court": "Pengadilan Negeri Surabaya",
+    "date": "2023-07-25",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "97/Pid.Sus/2020/PN.BDG",
+    "court": "Pengadilan Negeri Bandung",
+    "date": "2020-03-03",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait waris yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "waris",
+      "KUHPerdata",
+      "ahli waris"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "700/Pid.Gugatan/2021/PN.BDG",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2022-08-05",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait korupsi yang diatur dalam UU Tipikor.",
+    "keywords": [
+      "korupsi",
+      "UU Tipikor",
+      "suap"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "539/Pid.Gugatan/2021/PN.SMG",
+    "court": "Pengadilan Negeri Semarang",
+    "date": "2021-11-05",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait penipuan yang diatur dalam KUHP Pasal 378.",
+    "keywords": [
+      "penipuan",
+      "KUHP Pasal 378",
+      "penipuan digital"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "311/Pid.Gugatan/2022/PN.SBY",
+    "court": "Pengadilan Negeri Semarang",
+    "date": "2020-11-21",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "92/Pid.Gugatan/2023/PN.BDG",
+    "court": "Pengadilan Negeri Semarang",
+    "date": "2021-06-05",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait narkotika yang diatur dalam UU Narkotika.",
+    "keywords": [
+      "narkotika",
+      "UU Narkotika",
+      "pasal 127"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "414/Pid.Gugatan/2020/PN.YGY",
+    "court": "Pengadilan Tipikor Jakarta",
+    "date": "2020-09-14",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait penipuan yang diatur dalam KUHP Pasal 378.",
+    "keywords": [
+      "penipuan",
+      "KUHP Pasal 378",
+      "penipuan digital"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "523/Pid.Sus/2020/PN.BDG",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2023-05-07",
+    "summary": "Gugatan wanprestasi diajukan terhadap perjanjian kredit yang tidak dipenuhi oleh tergugat. Pengadilan memeriksa bukti-bukti yang diajukan kedua belah pihak. Kasus ini terkait sengketa tanah yang diatur dalam sertifikat.",
+    "keywords": [
+      "sengketa tanah",
+      "sertifikat",
+      "UUPA"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "273/Pid.Gugatan/2022/PN.JKT",
+    "court": "Pengadilan Negeri Semarang",
+    "date": "2021-04-06",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait penganiayaan yang diatur dalam KUHP Pasal 351.",
+    "keywords": [
+      "penganiayaan",
+      "KUHP Pasal 351",
+      "kekerasan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "687/Pid.Sus/2023/PN.BDG",
+    "court": "Pengadilan Negeri Jakarta Pusat",
+    "date": "2021-04-12",
+    "summary": "Pekerja menggugat perusahaan atas pemutusan hubungan kerja yang dianggap tidak sah. Pengadilan memeriksa masa kerja dan hak-hak pekerja. Kasus ini terkait penganiayaan yang diatur dalam KUHP Pasal 351.",
+    "keywords": [
+      "penganiayaan",
+      "KUHP Pasal 351",
+      "kekerasan"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "pidana",
+    "embedding": null
+  },
+  {
+    "case_number": "102/Pid.Gugatan/2020/PN.JKT",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2022-02-10",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait PHK yang diatur dalam pesangon.",
+    "keywords": [
+      "PHK",
+      "pesangon",
+      "PP No. 35/2021"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "keluarga",
+    "embedding": null
+  },
+  {
+    "case_number": "106/Pid.Gugatan/2020/PN.BDG",
+    "court": "Pengadilan Negeri Semarang",
+    "date": "2021-05-19",
+    "summary": "Sengketa perceraian antara suami dan istri diajukan ke Pengadilan Agama. Pasangan ini telah memisahkan diri selama lebih dari 2 tahun. Kasus ini terkait penipuan yang diatur dalam KUHP Pasal 378.",
+    "keywords": [
+      "penipuan",
+      "KUHP Pasal 378",
+      "penipuan digital"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  },
+  {
+    "case_number": "706/Pid.Gugatan/2022/PN.YGY",
+    "court": "Pengadilan Negeri Yogyakarta",
+    "date": "2023-01-25",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait wanprestasi yang diatur dalam KUHPerdata.",
+    "keywords": [
+      "wanprestasi",
+      "KUHPerdata",
+      "perjanjian kredit"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "perdata",
+    "embedding": null
+  },
+  {
+    "case_number": "513/Pid.Gugatan/2023/PN.JKT",
+    "court": "Pengadilan Hubungan Industrial Jakarta",
+    "date": "2023-04-15",
+    "summary": "Terdakwa dinyatakan bersalah melakukan tindak pidana sesuai pasal yang diatur dalam KUHP. Pengadilan mempertimbangkanberat ringannya perbuatan dan sikap terdakwa sepanjang persidangan. Kasus ini terkait penipuan yang diatur dalam KUHP Pasal 378.",
+    "keywords": [
+      "penipuan",
+      "KUHP Pasal 378",
+      "penipuan digital"
+    ],
+    "source_url": "https://putusan3.mahkamahagung.go.id/",
+    "category": "ketenagakerjaan",
+    "embedding": null
+  }
+]
